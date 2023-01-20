@@ -9,7 +9,7 @@
     "colors_accent_2": "#ffa000",
     "gradient_accent_2": "radial-gradient(rgba(255, 160, 0, 0.77) 42%, rgba(255, 80, 0, 1) 100%)",
     "colors_text": "#121212",
-    "colors_outline_button_labels": "#121212",
+    "colors_outline_button_labels": "#ffa000",
     "colors_background_1": "#ffffff",
     "gradient_background_1": "",
     "colors_background_2": "#f3f3f3",

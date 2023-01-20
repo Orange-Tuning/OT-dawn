@@ -1,5 +1,11 @@
 {
   "sections": {
+    "search-dropdowns": {
+      "type": "tag-wise-search-dropdowns",
+      "settings": {
+        "title": ""
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -201,6 +207,7 @@
     }
   },
   "order": [
+    "search-dropdowns",
     "image_banner",
     "rich_text",
     "featured_collection",

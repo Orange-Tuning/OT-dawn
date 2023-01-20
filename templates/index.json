@@ -149,20 +149,32 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "<p>Talk about your brand<\/p>",
+            "heading": "<p>We offer high quality auto tuning parts<\/p>",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>We have long lasting partnership to many manufacturers for car tuning. Because of that wie can offer rare and hard-to-get-parts for a reasonable price.<\/p>"
+          }
+        },
+        "b4a68942-8f13-4f01-9095-37e6ad9841e3": {
+          "type": "button",
+          "settings": {
+            "button_label": "About us",
+            "button_link": "shopify:\/\/pages\/contact",
+            "button_style_secondary": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
         "heading",
-        "text"
+        "text",
+        "b4a68942-8f13-4f01-9095-37e6ad9841e3"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -176,12 +188,12 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Our Bestsellers",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "bestseller",
         "products_to_show": 8,
         "columns_desktop": 4,
         "full_width": false,

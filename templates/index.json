@@ -77,17 +77,57 @@
         "bd6cc232-5663-436a-970a-af6efff730b9": {
           "type": "block",
           "settings": {
-            "img": "shopify:\/\/shop_images\/Goodridge_Logo.png",
+            "img": "shopify:\/\/shop_images\/eisenmann_logo_neu.png",
             "title_block": "",
             "title_block_size": "h5",
-            "url": ""
+            "url": "shopify:\/\/collections\/eisenmann"
+          }
+        },
+        "06e80523-3b49-4165-a35c-76aba2380e87": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/800px-HJS_logo_svg.png",
+            "title_block": "",
+            "title_block_size": "h5",
+            "url": "shopify:\/\/collections\/hjs"
+          }
+        },
+        "763a5264-02b5-452e-9645-e879e886e2f9": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/REMUS-Icon__black.png",
+            "title_block": "",
+            "title_block_size": "h5",
+            "url": "shopify:\/\/collections\/remus"
+          }
+        },
+        "09cec3fc-4920-44d9-9695-3edfc216198f": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/72551.png",
+            "title_block": "",
+            "title_block_size": "h5",
+            "url": "shopify:\/\/collections\/wiechers"
+          }
+        },
+        "fa4bda4d-6e38-42fa-9233-7e707127c9f5": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/milltek.for-light.png",
+            "title_block": "",
+            "title_block_size": "h5",
+            "url": "shopify:\/\/collections\/milltek"
           }
         }
       },
       "block_order": [
         "b0e57833-1ffb-4278-962a-dec34a07e2de",
         "3429f6f1-f05d-4f29-bdb9-3f764550efca",
-        "bd6cc232-5663-436a-970a-af6efff730b9"
+        "bd6cc232-5663-436a-970a-af6efff730b9",
+        "06e80523-3b49-4165-a35c-76aba2380e87",
+        "763a5264-02b5-452e-9645-e879e886e2f9",
+        "09cec3fc-4920-44d9-9695-3edfc216198f",
+        "fa4bda4d-6e38-42fa-9233-7e707127c9f5"
       ],
       "settings": {
         "title": "",

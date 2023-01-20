@@ -218,20 +218,20 @@
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "bmw"
           }
         },
         "product": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "akrapovic-wm-bm-ca-1-g-fits-for-bmw-440i-f32-f33-f36-2016-2020-carbon-fiber-mirror-cap-set-high-gloss",
             "second_image": false
           }
         },
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "akrapovic"
           }
         }
       },

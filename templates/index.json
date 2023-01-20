@@ -53,6 +53,36 @@
         "show_text_below": false
       }
     },
+    "7ba7a481-0376-4cd1-a00e-51dc622d9460": {
+      "type": "eg-brands",
+      "blocks": {
+        "b0e57833-1ffb-4278-962a-dec34a07e2de": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Akrapovic_Logo.png",
+            "title_block": "",
+            "title_block_size": "h5",
+            "url": "shopify:\/\/collections\/akrapovic"
+          }
+        }
+      },
+      "block_order": [
+        "b0e57833-1ffb-4278-962a-dec34a07e2de"
+      ],
+      "settings": {
+        "title": "",
+        "title_size": "h5",
+        "bg_color": "",
+        "img_height": "70",
+        "list_name": "Brands list",
+        "animation_duration": 10,
+        "gap": 16,
+        "pt": 1,
+        "pb": 1,
+        "mt": 0,
+        "mb": 0
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -219,6 +249,7 @@
   "order": [
     "search-dropdowns",
     "image_banner",
+    "7ba7a481-0376-4cd1-a00e-51dc622d9460",
     "rich_text",
     "featured_collection",
     "collage",

@@ -5,19 +5,31 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "b77d718b-9848-4cce-9c22-740a3784ae89": {
+          "type": "announcement",
+          "settings": {
+            "text": "NEW STORE LAUNCHED!",
+            "text_alignment": "center",
+            "color_scheme": "accent-1",
+            "link": ""
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Welcome to our store | Worldwide shipping | Top brands",
             "text_alignment": "center",
-            "color_scheme": "background-1",
+            "color_scheme": "accent-2",
             "link": ""
           }
         }
       },
       "block_order": [
+        "b77d718b-9848-4cce-9c22-740a3784ae89",
         "announcement-bar-0"
-      ]
+      ],
+      "settings": {
+      }
     },
     "header": {
       "type": "header",
@@ -27,7 +39,7 @@
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
-        "show_line_separator": true,
+        "show_line_separator": false,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
         "padding_top": 20,

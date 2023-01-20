@@ -64,10 +64,30 @@
             "title_block_size": "h5",
             "url": "shopify:\/\/collections\/akrapovic"
           }
+        },
+        "3429f6f1-f05d-4f29-bdb9-3f764550efca": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Eibach_Logo.jpg",
+            "title_block": "",
+            "title_block_size": "h5",
+            "url": "shopify:\/\/collections\/eibach"
+          }
+        },
+        "bd6cc232-5663-436a-970a-af6efff730b9": {
+          "type": "block",
+          "settings": {
+            "img": "shopify:\/\/shop_images\/Goodridge_Logo.png",
+            "title_block": "",
+            "title_block_size": "h5",
+            "url": ""
+          }
         }
       },
       "block_order": [
-        "b0e57833-1ffb-4278-962a-dec34a07e2de"
+        "b0e57833-1ffb-4278-962a-dec34a07e2de",
+        "3429f6f1-f05d-4f29-bdb9-3f764550efca",
+        "bd6cc232-5663-436a-970a-af6efff730b9"
       ],
       "settings": {
         "title": "",

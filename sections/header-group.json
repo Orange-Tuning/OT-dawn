@@ -5,6 +5,15 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "b77d718b-9848-4cce-9c22-740a3784ae89": {
+          "type": "announcement",
+          "settings": {
+            "text": "NEW STORE LAUNCHED!",
+            "text_alignment": "center",
+            "color_scheme": "accent-1",
+            "link": ""
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
@@ -16,6 +25,7 @@
         }
       },
       "block_order": [
+        "b77d718b-9848-4cce-9c22-740a3784ae89",
         "announcement-bar-0"
       ],
       "settings": {

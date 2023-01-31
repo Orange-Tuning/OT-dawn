@@ -89,10 +89,11 @@
 ]
 }
 {% endschema %}
+<script src="{{ 'searchdata.json' | asset_url }}" defer="defer"></script>
 <script> 
  $(document).ready(function(){
 
-    var menuArr = [{ {% for link in linklists.maker.links %}{% if link.links != blank %}"{{ link.handle }}":{ {% for child_link in link.links %}{% if child_link.links != blank %}"{{ child_link.handle }}" :[ {% for grandchild_link in child_link.links %}"{{grandchild_link.handle}}"{% unless forloop.last %},{% endunless %}{% endfor %} ],{% else %}"{{ child_link.handle }}":"{{ child_link.handle }}",{% endif %}{% endfor %} }, {% else %}"{{ link.handle }}":"{{ link.handle }}",{% endif %}{% endfor %} }];
+    var menuArr = JSON.parse(data);
     var mfgArr = [{% for link in linklists.manufacturer.links %}"{{link.handle}}",{% endfor %}];
     var arr, current_field, dropdown_val1, dropdown_val2, dropdown_val3, dropdown_val4,search_tag,tagstr,newtext;
     

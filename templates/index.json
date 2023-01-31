@@ -321,6 +321,7 @@
     },
     "5fe36290-5009-4b13-8ae1-8f1e7082d905": {
       "type": "multi-featured-coll",
+      "disabled": true,
       "settings": {
         "view_all_style": "solid",
         "heading1": "BODY PARTS",

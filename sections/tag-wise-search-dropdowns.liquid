@@ -9,11 +9,11 @@
 {% assign finalmf = "" %}
 
 <div class="page-width">
+  {{  shop.metafields.manufacturer.handle1 }}
+  {{  shop.metafields.manufacturer.handle1.value }}
   {% if section.settings.title != blank %}
   <div class="title h3 sd-title">
     {{ section.settings.title }}
-    {{  shop.metafields.manufacturer.handle1 }}
-    {{  shop.metafields.manufacturer.handle1.value }}
   </div>
   {% endif %}
   <div class="sd-formFields">

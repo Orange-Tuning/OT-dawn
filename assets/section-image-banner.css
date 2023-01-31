@@ -438,5 +438,5 @@
 }
 
 .banner__media>img {
-  object-fit: contain;
+  object-fit: cover;
 }

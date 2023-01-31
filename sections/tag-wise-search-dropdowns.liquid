@@ -94,7 +94,7 @@
  $(document).ready(function(){
 
     var menuArr = JSON.parse(data);
-    var mfgArr = [{% for link in shop.metafields.manufacturer %}"{{link.value}}",{% endfor %}{% for link in shop.metafields.manufacturer %}"{{link.value}}",{% endfor %}{% for link in shop.metafields.manufacturer %}"{{link.value}}",{% endfor %}];
+    var mfgArr = [{% for link in shop.metafields.manufacturer.handle1 %}"{{link.value}}",{% endfor %}{% for link in shop.metafields.manufacturer.handle2 %}"{{link.value}}",{% endfor %}{% for link in shop.metafields.manufacturer.handle3 %}"{{link.value}}",{% endfor %}];
     var arr, current_field, dropdown_val1, dropdown_val2, dropdown_val3, dropdown_val4,search_tag,tagstr,newtext;
     
     console.log("menuArr ::"+JSON.stringify(menuArr));  

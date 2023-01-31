@@ -90,216 +90,1568 @@
 }
 {% endschema %}
 <script> 
- $(document).ready(function(){
+$(document).ready(function() {
 
-    var menuArr = [{"Audi": {"TT-TTS-TTRS-8S": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "S1-8X": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "S4-B9": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "S5-5F": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "A1-8X": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "RS3-8V": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "A3-8V": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Q2-GA": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Q3-F3": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "SQ2-GA": ["Exhaust-Systems", "Suspension"], "A3-8P": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "TT-TTS-TTRS-8J": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "S3-8V": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A1-GB": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "RSQ3-F3": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "RS3-8Y": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A4-B8": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A4-B9": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A5-8T": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A5-F5": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "RS4-B8": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "RS5-8T": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "S4-B8": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "S5-8T": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "TT-TTS-8N": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A3-8L": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A4-B6": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A4-B7": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A6-4G-C7": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A6-F2-C8": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A7-4G-4G1-C7": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "A7-F2-C8": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Q7-4L": ["Exhaust-Systems", "Suspension", "Suspension"], "Q7-4M": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Q8-4M": ["Exhaust-Systems", "Suspension", "Suspension"], "R8-42": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "RS3-8P": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "RS4-B5": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "RS4-B7": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "RS4-B9": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "RS6-4B-C5": ["Exhaust-Systems", "Suspension", "Suspension"], "RS6-4F-C6": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "RS6-4G-C7": ["Suspension", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "RS6-F2-C8": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "RS7-4G-C7": ["Suspension", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension"], "RS7-F2-C8": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "RSQ8-4M": ["Exhaust-Systems", "Exhaust-Systems", "Suspension"], "S3-8L": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "S3-8P": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "S3-8Y": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "S4-B6": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "S4-B7": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "S6-4F-C6": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "S6-4G-C7": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension"], "S6-F2-C8": ["Exhaust-Systems", "Suspension", "Suspension"], "S7-4G-C7": ["Exhaust-Systems", "Exhaust-Systems"], "S7-F2-C8": ["Exhaust-Systems", "Suspension"], "S8-D4-4H": ["Exhaust-Systems", "Suspension"], "S8-D5-4N": ["Exhaust-Systems", "Suspension"], "SQ5-8R1": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "SQ5-FY": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "SQ7-4M": ["Exhaust-Systems", "Suspension", "Suspension"], "SQ8-4M": ["Exhaust-Systems", "Suspension"], "Urquattro-85": ["Exhaust-Systems", "Suspension"], "RS5-F5": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "80-B4": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "80-90-B2": ["Suspension", "Suspension"], "80-90-B3": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A4-B5": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A6-4F-C6": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Q5-8R": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A3-8Y": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Q3-8U-8U1": ["Suspension", "Suspension", "Suspension", "Suspension"], "RSQ3-8U-8U1": ["Suspension", "Suspension", "Suspension", "Suspension"], "A6-4B-C5": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Q5-FY": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "A4-8H-Convertible": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "S4-B5": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "100-A6-C4": ["Suspension", "Suspension", "Suspension"], "Q4-e-tron-FZ": ["Suspension", "Suspension"], "A8-D2-4D": ["Suspension", "Suspension", "Suspension", "Suspension"], "A2-8Z": ["Suspension", "Suspension", "Suspension", "Suspension"], "A8-D3-4E": ["Suspension"], "A8-D4-4H": ["Suspension"], "100-C3": ["Suspension", "Suspension"], "200-44": ["Suspension", "Suspension"], "A8-8H-D4": ["Suspension"], "A8-D4-8H": ["Suspension"], "A8-D5-F8": ["Suspension"], "e-tron-GE": ["Suspension"], "e-tron-GT-FW": ["Suspension"], "S6-4B-C5": ["Suspension", "Suspension", "Suspension"], "S8-D2-4D": ["Suspension", "Suspension"], "S8-D3-4E": ["Suspension"], "50-86": ["Suspension"], "Coupe-89": ["Suspension", "Suspension"], "RS2-P1": ["Suspension"], "S2-B4": ["Suspension", "Suspension"], "S4-C4": ["Suspension"], "S6-C4": ["Suspension"], "V8-D11-C4": ["Suspension"], "A5-B8": ["Suspension"]}, "BMW": {"F20-F21-1series": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Body-Parts", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F30-F31-F34-3series": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Body-Parts", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F22-F23-2series": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Body-Parts", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F32-F33-F36-4series": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Body-Parts", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F87-M2": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Body-Parts", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "G11-G12-7series": ["Exhaust-Systems", "Suspension", "Suspension"], "G30-G31-5series": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F45-F46-2series-Tourer": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F48-X1": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E81-E82-E87-E88-1series": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E90-E91-E92-E93-3series": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F80-M3": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Body-Parts", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F82-F83-M4": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Body-Parts", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F39-X2": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F40-1series": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "G14-G15-G16-8series": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "G20-G21-3series": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "G29-Z4": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "G32-6series-GT": ["Exhaust-Systems", "Suspension", "Suspension"], "G80-M3": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Body-Parts", "Suspension", "Suspension"], "G82-G83-M4": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Body-Parts", "Exhaust-Systems", "Suspension", "Suspension"], "F97-X3M": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "F98-X4M": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "E30-3series": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E30-M3": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension"], "E31-8series": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "E32-7series": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "E34-5series": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E34-M5": ["Exhaust-Systems", "Suspension", "Suspension"], "E36-3series": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E36-M3": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E38-7series": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "E39-5series": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E39-M5": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "E46-3series": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E46-M3": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E52-Z8": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "E60-E61-5series": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E60-E61-M5": ["Exhaust-Systems", "Suspension", "Suspension"], "E63-E64-6series": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E63-E64-M6": ["Exhaust-Systems", "Suspension", "Suspension"], "E70-X5-+-X5M": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "E71-X6-+-X6M": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "E82-M-Coupe-1series": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E85-E86-Z4-M-Roadster-+-M-Coupe": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E85-E86-Z4-Roadster-+-Coupe": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E89-Z4": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E90-E92-E93-M3": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F06-F12-F13-6series": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "F06-F12-F13-M6": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension"], "F07-F10-F11-5series": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F10-M5": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension"], "F85-X5M": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "F86-X6M": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "F90-M5": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Body-Parts", "Suspension", "Suspension", "Suspension"], "F91-F92-F93-M8": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Body-Parts", "Suspension", "Suspension", "Suspension"], "F95-X5M": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension"], "F96-X6M": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension"], "G06-X6": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "G22-G23-G26-4series": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Z3": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Z3-M-Roadster-+-M-Coupe": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "G42-2series": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "i8": ["Exhaust-Systems", "Suspension", "Suspension"], "E65-E66-7series": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "F25-X3": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F26-X4": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F44-2series-Gran-Coupe": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "E23-7series": ["Suspension", "Suspension"], "Z1": ["Suspension", "Suspension"], "E10-02series": ["Suspension", "Suspension", "Suspension", "Suspension"], "E12-5series": ["Suspension", "Suspension"], "E21-3series": ["Suspension", "Suspension"], "E24-6series": ["Suspension", "Suspension"], "E28-5series": ["Suspension", "Suspension", "Suspension", "Suspension"], "F01-F02-7series": ["Suspension", "Suspension", "Suspension"], "F15-X5": ["Suspension", "Suspension", "Suspension", "Suspension"], "F16-X6": ["Suspension", "Suspension", "Suspension", "Suspension"], "G01-X3": ["Suspension", "Suspension", "Suspension", "Suspension"], "G02-X4": ["Suspension", "Suspension", "Suspension", "Suspension"], "G05-X5": ["Suspension", "Suspension", "Suspension"], "E84-X1": ["Suspension", "Suspension", "Suspension", "Suspension"], "E53-X5": ["Suspension", "Suspension", "Suspension"], "E83-X3": ["Suspension", "Suspension", "Suspension", "Suspension"], "G26-i4": ["Suspension", "Suspension"], "i3": ["Suspension", "Suspension"], "G07-X7": ["Suspension"], "E28-M5": ["Suspension"], "U06-2series-Active-Tourer": ["Suspension", "Suspension"], "iX-i20": ["Suspension"], "F10-F11-5series": ["Suspension"]}, "Citroen": {"C4": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "C5": ["Exhaust-Systems", "Suspension", "Suspension"], "DS3": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "DS4": ["Exhaust-Systems", "Suspension", "Suspension"], "DS5": ["Exhaust-Systems"], "AX": ["Suspension", "Suspension", "Suspension", "Suspension"], "C1": ["Suspension", "Suspension", "Suspension", "Suspension"], "Saxo": ["Suspension", "Suspension", "Suspension", "Suspension"], "Xsara": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Berlingo": ["Suspension", "Suspension"], "C2": ["Suspension", "Suspension", "Suspension"], "C3": ["Suspension", "Suspension", "Suspension"], "C8": ["Suspension", "Suspension"], "Evasion": ["Suspension", "Suspension"], "Jumpy": ["Suspension"], "C-Crosser": ["Suspension", "Suspension"], "C-Zero": ["Suspension", "Suspension"], "DS7-Crossback": ["Suspension"], "Xantia": ["Suspension"], "XM": ["Suspension"], "ZX": ["Suspension", "Suspension", "Suspension"]}, "Cupra": {"Ateca-5FP": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Leon-5F": ["Exhaust-Systems"], "Formentor": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Leon-KL": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Born": ["Suspension", "Suspension", "Suspension"]}, "Ford": {"Focus-MK2": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Focus-MK3": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Fiesta-MK7": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F150": ["Exhaust-Systems", "Exhaust-Systems", "Suspension"], "Fiesta-MK6": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Fiesta-MK8": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Focus-MK4": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "Mondeo-MK3": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Mustang-MK6": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Mustang-Mach-E": ["Exhaust-Systems", "Suspension", "Suspension"], "Puma": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "Ranger": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Capri": ["Suspension"], "Cougar": ["Suspension", "Suspension", "Suspension"], "Escort": ["Suspension", "Suspension", "Suspension", "Suspension"], "Fiesta-MK1": ["Suspension"], "Fiesta-MK2": ["Suspension", "Suspension", "Suspension"], "Fiesta-MK3": ["Suspension", "Suspension", "Suspension", "Suspension"], "Fiesta-MK5": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Fusion": ["Suspension", "Suspension", "Suspension", "Suspension"], "Ka": ["Suspension", "Suspension", "Suspension", "Suspension"], "Mondeo-MK2": ["Suspension", "Suspension", "Suspension"], "Mustang-MK1": ["Suspension"], "Mustang-MK5": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Probe": ["Suspension", "Suspension", "Suspension"], "Scorpio": ["Suspension", "Suspension", "Suspension"], "Sierra": ["Suspension", "Suspension", "Suspension", "Suspension"], "Mondeo-MK5": ["Suspension", "Suspension", "Suspension", "Suspension"], "Ecosport": ["Suspension", "Suspension", "Suspension"], "Bronco": ["Suspension", "Suspension", "Suspension"], "Edge": ["Suspension", "Suspension", "Suspension"], "Focus-MK1": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "C-Max": ["Suspension", "Suspension"], "B-Max": ["Suspension", "Suspension"], "Mondeo-MK4": ["Suspension", "Suspension", "Suspension"], "Kuga-MK1": ["Suspension", "Suspension"], "Kuga-MK2": ["Suspension", "Suspension", "Suspension"], "Galaxy-": ["Suspension", "Suspension", "Suspension", "Suspension"], "S-Max": ["Suspension", "Suspension", "Suspension"], "Kuga-MK3": ["Suspension", "Suspension", "Suspension"], "Tourneo--Transit-Custom": ["Suspension", "Suspension"], "Fiesta-MK4": ["Suspension", "Suspension", "Suspension"], "Explorer": ["Suspension", "Suspension"], "Maverick": ["Suspension", "Suspension"], "Mustang-MK4": ["Suspension"], "Windstar": ["Suspension"], "Escape": ["Suspension"], "Mondeo-MK1": ["Suspension"]}, "Hyundai": {"i30-MK3": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "i20-MK3": ["Exhaust-Systems", "Suspension", "Suspension"], "Genesis": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "ix35": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Kona": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Tucson-MK3": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Coupe": ["Suspension", "Suspension", "Suspension", "Suspension"], "Elantra": ["Suspension", "Suspension"], "i30-MK2": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Veloster": ["Suspension", "Suspension", "Suspension"], "Santa-Fe-MK3": ["Suspension", "Suspension", "Suspension"], "Tucson-MK4": ["Suspension", "Suspension", "Suspension"], "Santa-Fe-MK4": ["Suspension", "Suspension", "Suspension"], "Accent-MK4": ["Suspension"], "Solaris": ["Suspension"], "i20-MK1": ["Suspension", "Suspension"], "i20-MK2": ["Suspension", "Suspension"], "i10-MK2": ["Suspension", "Suspension"], "i30-MK1": ["Suspension", "Suspension"], "i10-MK3": ["Suspension"], "i40": ["Suspension", "Suspension", "Suspension"], "Bayon": ["Suspension"], "Sonata": ["Suspension", "Suspension"], "Ioniq": ["Suspension", "Suspension"], "Ioniq-5": ["Suspension", "Suspension"], "Grandeur": ["Suspension", "Suspension"], "ix20": ["Suspension", "Suspension"], "Santa-Fe-MK2": ["Suspension", "Suspension"], "Accent-MK3": ["Suspension", "Suspension"], "i10-MK1": ["Suspension"], "Santa-Fe-MK1": ["Suspension", "Suspension"], "Tucson-MK1": ["Suspension", "Suspension"], "Tucson-MK2": ["Suspension"], "ix55": ["Suspension"], "Veracruz": ["Suspension"], "Galloper": ["Suspension"], "Terracan": ["Suspension"], "Atos": ["Suspension"], "Getz": ["Suspension", "Suspension"], "Lantra": ["Suspension", "Suspension"], "Pony-MK3": ["Suspension"], "Accent-MK1": ["Suspension"], "Accent-MK2": ["Suspension"], "Accent-MK5": ["Suspension"], "Trajet": ["Suspension"]}, "Mercedes": {"A-Class-W176": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "CLA-C117": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "GLA-X156": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "C-Class-W204-S204": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "C-Class-W205-S205-C205-A205": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "CLK-W208": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "CLK-W209": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E-Class-Coupe-Convertible-W207": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E-Class-W210-S210": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "E-Class-W211-S211": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "E-Class-W212-S212": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "S-Class-W140": ["Exhaust-Systems", "Suspension", "Suspension"], "S-Class-W220": ["Exhaust-Systems", "Suspension"], "SL-R107": ["Exhaust-Systems", "Suspension", "Suspension"], "SL-R129": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "SL-R230": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "SL-R231": ["Exhaust-Systems", "Suspension", "Suspension"], "W124": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "G-Class-W463": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "A-Class-W177-V177": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "CLA-C118": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "CLS-C218": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "E-Class-W213-S213": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "GLA-H247": ["Exhaust-Systems", "Suspension"], "GLE-V167": ["Exhaust-Systems", "Suspension"], "GLS-X167": ["Exhaust-Systems", "Suspension"], "GT-GTS-GTR-C190-": ["Exhaust-Systems", "Suspension", "Suspension"], "M-Class-GLE-W166-C292": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "SLK-R170": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "C-Class-W203-S203": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "190-W201": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "B-Class-W246": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "GLK-X204": ["Suspension", "Suspension", "Suspension"], "SLK-R171": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "C-Class-W202-S202": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "SLK-R172": ["Suspension"], "B-Class-W247": ["Suspension", "Suspension"], "X-Class-W470": ["Suspension", "Suspension", "Suspension"], "GLB-X247": ["Suspension", "Suspension", "Suspension"], "A-Class-W169": ["Suspension", "Suspension", "Suspension"], "B-Class-W245": ["Suspension", "Suspension", "Suspension", "Suspension"], "A-Class-W168": ["Suspension", "Suspension"], "SLK-SLC-R172": ["Suspension", "Suspension", "Suspension", "Suspension"], "C-Class-W206-S206": ["Suspension", "Suspension"], "CLS-C219": ["Suspension", "Suspension", "Suspension", "Suspension"], "S-Class-W126": ["Suspension", "Suspension", "Suspension"], "E-Class-Coupe-Convertible-A238-C238-": ["Suspension", "Suspension"], "GLC-C253-X253": ["Suspension", "Suspension", "Suspension"], "Viano-Vito-W639": ["Suspension", "Suspension", "Suspension", "Suspension"], "V-Class-Vito-W447-": ["Suspension", "Suspension", "Suspension", "Suspension"], "M-Class-W164": ["Suspension", "Suspension", "Suspension"], "CL-C215": ["Suspension"], "M-Class-W163": ["Suspension", "Suspension"], "Vaneo-W414": ["Suspension", "Suspension"], "V-Class-Vito-W638": ["Suspension", "Suspension"], "GL-X164": ["Suspension"], "Citan-W415": ["Suspension", "Suspension"], "Citan-W420": ["Suspension"], "CL-C216": ["Suspension"], "CLS-C257": ["Suspension", "Suspension"], "EQC-N293": ["Suspension", "Suspension"], "EQB-X243": ["Suspension"], "GLS-X166": ["Suspension"], "GT-4-Door-X290": ["Suspension"], "GT-GTS-GTR-C190": ["Suspension"], "MB100": ["Suspension"], "R-Class-W251": ["Suspension", "Suspension"], "S-Class-Coupe-C217": ["Suspension"], "S-Class-W221": ["Suspension"], "S-Class-W222": ["Suspension"], "S-Class-W223": ["Suspension"], "SLS-C197": ["Suspension", "Suspension"], "W123": ["Suspension", "Suspension"], "EQB": ["Suspension"], "-8-W114-W115": ["Suspension"], "S-Class-W116": ["Suspension"], "S-Class-W108": ["Suspension"], "SL-W121": ["Suspension"]}, "Mini": {"R55-R56-R57-R58-R59-R60-R61-06-16": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "F54-F55-F56-F57-F60-14-": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "R50-R52-R53-01-06": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"]}, "Opel": {"Corsa-D": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Astra-J": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Ascona": ["Suspension", "Suspension"], "Astra-F": ["Suspension", "Suspension", "Suspension", "Suspension"], "Astra-G": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Corsa-A": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Corsa-B": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Kadett-D": ["Suspension", "Suspension"], "Kadett-E": ["Suspension", "Suspension", "Suspension"], "Tigra-A": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Corsa-C": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Tigra-Twin-Top": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Vectra-B": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Vectra-A": ["Suspension", "Suspension", "Suspension", "Suspension"], "Calibra-A": ["Suspension", "Suspension", "Suspension", "Suspension"], "Kadett-C": ["Suspension", "Suspension", "Suspension"], "Manta": ["Suspension", "Suspension", "Suspension"], "Astra-H": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Monza": ["Suspension"], "Senator": ["Suspension", "Suspension"], "Signum": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Vectra-C": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Adam": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Corsa-E": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Omega-A": ["Suspension", "Suspension", "Suspension"], "Omega-B": ["Suspension", "Suspension", "Suspension"], "Insignia-A": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "GT": ["Suspension", "Suspension"], "Speedster": ["Suspension", "Suspension"], "Meriva-B": ["Suspension", "Suspension"], "Astra-K": ["Suspension", "Suspension", "Suspension"], "Astra-L": ["Suspension"], "Cascada": ["Suspension", "Suspension"], "Mokka-A": ["Suspension", "Suspension", "Suspension"], "Zafira-C": ["Suspension", "Suspension", "Suspension"], "Corsa-F": ["Suspension", "Suspension"], "Mokka-B": ["Suspension", "Suspension"], "Zafira-B": ["Suspension", "Suspension", "Suspension"], "Crossland-X": ["Suspension", "Suspension"], "Zafira-A": ["Suspension", "Suspension", "Suspension"], "Insignia-B": ["Suspension", "Suspension", "Suspension", "Suspension"], "Zafira-Life": ["Suspension", "Suspension", "Suspension"], "Vivaro-C": ["Suspension", "Suspension"], "Antara": ["Suspension", "Suspension"], "Frontera": ["Suspension", "Suspension"], "Monterey": ["Suspension"], "Agila": ["Suspension", "Suspension"], "Combo": ["Suspension", "Suspension"], "Grandland-X": ["Suspension", "Suspension"], "Meriva-A": ["Suspension", "Suspension"], "Sintra": ["Suspension", "Suspension"], "Vivaro-B": ["Suspension", "Suspension"], "Karl-A": ["Suspension"], "Vivaro-A": ["Suspension"]}, "Peugeot": {"207": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "208": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "308": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "508": ["Exhaust-Systems", "Suspension", "Suspension"], "3008": ["Exhaust-Systems", "Suspension", "Suspension"], "5008": ["Exhaust-Systems", "Suspension", "Suspension"], "RCZ": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "205": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "107": ["Suspension", "Suspension", "Suspension", "Suspension"], "106": ["Suspension", "Suspension", "Suspension", "Suspension"], "306": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "309": ["Suspension", "Suspension", "Suspension"], "406": ["Suspension", "Suspension", "Suspension"], "206": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "407": ["Suspension", "Suspension", "Suspension"], "Partner-Ranch": ["Suspension", "Suspension"], "108": ["Suspension", "Suspension"], "307": ["Suspension", "Suspension", "Suspension", "Suspension"], "1007": ["Suspension", "Suspension", "Suspension"], "2008": ["Suspension", "Suspension"], "4008": ["Suspension", "Suspension"], "807": ["Suspension", "Suspension"], "806": ["Suspension", "Suspension"], "Expert": ["Suspension", "Suspension"], "405": ["Suspension", "Suspension"], "4007": ["Suspension"], "605": ["Suspension"], "607": ["Suspension"], "i-On": ["Suspension"]}, "Seat": {"Ibiza-6J-6P": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Leon-5F": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Altea-5P": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Leon-1P": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Toledo-5P": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Ibiza-6L": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Leon-1M": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Ibiza-6F": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Leon-KL": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Arosa-6H": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Cordoba-6K": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Ibiza-6K": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Toledo-1L": ["Suspension", "Suspension", "Suspension", "Suspension"], "Toledo-1M": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Ibiza-021A": ["Suspension", "Suspension"], "Exeo-3R": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Ateca-5FP": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Tarraco-KN": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Cordoba-6L": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Mii-AA": ["Suspension", "Suspension", "Suspension", "Suspension"], "Arona-KJ": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Toledo-KG": ["Suspension", "Suspension", "Suspension"], "Alhambra-7N": ["Suspension", "Suspension", "Suspension"], "Alhambra-7MS": ["Suspension", "Suspension", "Suspension"]}, "Skoda": {"Octavia-5E": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Karoq-NU": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Superb-3V": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Octavia-1Z": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Superb-3T": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Octavia-NX": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Octavia-1U": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Fabia-NJ": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "Fabia-6Y": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Fabia-5J": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Kodiaq-NS": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Citigo-AA": ["Suspension", "Suspension", "Suspension", "Suspension"], "Rapid-NH": ["Suspension", "Suspension", "Suspension", "Suspension"], "Scala-NW": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Kamiq-NW": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Fabia-PJ": ["Suspension", "Suspension", "Suspension", "Suspension"], "Roomster-5J": ["Suspension", "Suspension", "Suspension"], "Yeti-5L": ["Suspension", "Suspension", "Suspension"], "Superb-3U": ["Suspension", "Suspension", "Suspension"], "Enyaq-iV-NY": ["Suspension", "Suspension"], "Felicia": ["Suspension", "Suspension"], "Favorit-Forman": ["Suspension"], "Praktik-5J": ["Suspension"]}, "Toyota": {"Supra": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "GR-Yaris": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "GT86": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Aygo": ["Suspension", "Suspension", "Suspension", "Suspension"], "Yaris": ["Suspension", "Suspension", "Suspension"], "Corolla": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Starlet": ["Suspension", "Suspension", "Suspension"], "Auris": ["Suspension", "Suspension", "Suspension"], "Avensis": ["Suspension", "Suspension", "Suspension", "Suspension"], "Paseo": ["Suspension", "Suspension", "Suspension"], "Land-Cruiser": ["Suspension", "Suspension", "Suspension"], "IQ": ["Suspension", "Suspension"], "Vios": ["Suspension"], "Verso": ["Suspension", "Suspension"], "MR2": ["Suspension", "Suspension", "Suspension"], "C-HR": ["Suspension", "Suspension"], "Alphard": ["Suspension"], "Celica": ["Suspension", "Suspension"], "Prius": ["Suspension", "Suspension"], "RAV-4": ["Suspension", "Suspension", "Suspension"], "Urban-Cruiser": ["Suspension", "Suspension"], "4Runner": ["Suspension"], "Hilux": ["Suspension"], "Camry": ["Suspension", "Suspension"], "Carina": ["Suspension", "Suspension"], "Picnic": ["Suspension", "Suspension"], "Previa": ["Suspension", "Suspension"], "Mirai": ["Suspension"], "Passo": ["Suspension"]}, "Volkwagen": {"Polo-6R": ["Exhaust-Systems", "Suspension"], "Golf-MK7": ["Exhaust-Systems", "Exhaust-Systems", "Suspension"], "Polo-AW": ["Exhaust-Systems", "Exhaust-Systems", "Suspension"], "Arteon-3H": ["Exhaust-Systems", "Suspension"], "T-Roc-A1": ["Exhaust-Systems", "Suspension"], "Eos-1F": ["Exhaust-Systems", "Suspension"], "Golf-MK5": ["Exhaust-Systems", "Exhaust-Systems", "Suspension"], "Golf-MK6": ["Exhaust-Systems", "Exhaust-Systems", "Suspension"], "Jetta-MK5": ["Exhaust-Systems", "Suspension"], "Jetta-MK6": ["Exhaust-Systems"], "Passat-B6-B7-+-CC": ["Exhaust-Systems", "Suspension"], "Scirocco-MK3": ["Exhaust-Systems", "Exhaust-Systems", "Suspension"], "Passat-B8": ["Exhaust-Systems", "Suspension"], "Golf-MK8": ["Exhaust-Systems", "Exhaust-Systems", "Suspension"], "Beetle-16": ["Suspension"], "Beetle-1C-1Y-9C": ["Suspension"], "Bora-1J-Jetta-MK4": ["Suspension"], "Bus-T3": ["Suspension"], "Bus-T4": ["Suspension"], "Bus-T5": ["Suspension"], "Bus-T6": ["Suspension"], "Caddy-SB": ["Suspension"], "Corrado-53i": ["Suspension"], "Fox-5Z": ["Suspension"], "Golf-MK1": ["Suspension"], "Golf-MK2": ["Suspension"], "Golf-MK3": ["Suspension"], "Golf-MK4": ["Suspension"], "Jetta-MK1": ["Suspension"], "Jetta-MK2": ["Suspension"], "Lupo-6X-6ES": ["Suspension"], "Passat-B5": ["Suspension"], "Polo-6N-6N2-6KV": ["Suspension"], "Polo-9N-9N3": ["Suspension"], "Scirocco-MK1-MK2": ["Suspension"], "Taigo-CS": ["Suspension"], "T-Cross-C1": ["Suspension"], "Tiguan-5N": ["Suspension"], "Tiguan-AD1": ["Suspension"], "Touran-1T": ["Suspension"], "Touran-5T": ["Suspension"], "Up-AA": ["Suspension"], "Vento-1HX0-Jetta-MK3": ["Suspension"]}, "Porsche": {"911-66-80": ["Exhaust-Systems", "Suspension", "Suspension"], "911-992": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "911-991": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "911-996": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "911-997": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Boxster-987": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Boxster-718-982": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Cayenne-958": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "Cayman-987": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Cayman-718-982": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Macan-95B": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Cayman-981": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Cayenne-9YA": ["Exhaust-Systems", "Suspension", "Suspension"], "Panamera-971": ["Exhaust-Systems", "Suspension", "Suspension"], "Panamera-970": ["Exhaust-Systems", "Suspension", "Suspension"], "Boxster-981": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "911-964": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "911-993": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "924": ["Suspension", "Suspension"], "944": ["Suspension", "Suspension", "Suspension"], "968": ["Suspension", "Suspension", "Suspension"], "Cayenne-955-957": ["Suspension", "Suspension", "Suspension", "Suspension"], "Boxster-986": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Taycan-Y1A": ["Suspension"], "928": ["Suspension"], "959": ["Suspension"], "911-965-Turbo": ["Suspension", "Suspension", "Suspension"]}, "AlfaRomeo": {"Giulia-952": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Stelvio-949": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension"], "145-146-930": ["Suspension", "Suspension", "Suspension"], "GTV-Spider-Coupe-916": ["Suspension", "Suspension", "Suspension"], "Giulietta-940": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "159-939": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "147-937": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "156-932": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "GT-Coupe-937": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Brera-939": ["Suspension", "Suspension", "Suspension", "Suspension"], "Spider-939": ["Suspension", "Suspension", "Suspension", "Suspension"], "MiTo-955": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "75-162": ["Suspension"], "155-167": ["Suspension", "Suspension"], "166": ["Suspension", "Suspension"], "4C-+-4C-Spider-960-961": ["Suspension", "Suspension"], "164": ["Suspension", "Suspension"], "8C-920": ["Suspension"], "33-907": ["Suspension"]}, "Bentley": {"Bentayga": ["Exhaust-Systems", "Suspension"], "Continental-Flying-Spur-3W": ["Suspension"], "Continental-GT-3W": ["Suspension"], "Flying-Spur-3S": ["Suspension"]}, "Dodge": {"Challenger": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "RAM": ["Exhaust-Systems", "Suspension", "Suspension"], "Caliber": ["Suspension", "Suspension"], "Nitro": ["Suspension", "Suspension"], "Magnum": ["Suspension", "Suspension"], "Dakota": ["Suspension"], "Durango": ["Suspension"], "Journey": ["Suspension", "Suspension"], "Viper": ["Suspension"], "Avenger": ["Suspension"], "Charger": ["Suspension", "Suspension"], "Neon": ["Suspension"]}, "Honda": {"e": ["Exhaust-Systems", "Suspension", "Suspension"], "Civic-MK10": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Civic-MK8": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "Civic-MK7": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "Civic-MK9": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "CR-Z": ["Exhaust-Systems", "Suspension", "Suspension"], "Civic-MK4": ["Suspension", "Suspension", "Suspension", "Suspension"], "Civic-MK5": ["Suspension", "Suspension", "Suspension", "Suspension"], "CRX-MK2": ["Suspension", "Suspension", "Suspension"], "CRX-MK3": ["Suspension", "Suspension", "Suspension"], "Civic-MK6": ["Suspension", "Suspension", "Suspension", "Suspension"], "CRX-MK1": ["Suspension"], "Prelude": ["Suspension", "Suspension", "Suspension"], "Accord-MK7": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Accord-MK8": ["Suspension", "Suspension", "Suspension", "Suspension"], "S2000": ["Suspension", "Suspension", "Suspension"], "CR-V": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Jazz": ["Suspension", "Suspension"], "Stream": ["Suspension"], "HR-V": ["Suspension", "Suspension"], "Accord-MK6": ["Suspension", "Suspension", "Suspension"], "Integra": ["Suspension", "Suspension"], "Accord-MK3": ["Suspension"], "Accord-MK5": ["Suspension", "Suspension"], "Civic-MK3": ["Suspension"], "Concerto": ["Suspension", "Suspension"], "FR-V": ["Suspension", "Suspension"], "Legend": ["Suspension", "Suspension"], "Logo": ["Suspension", "Suspension"], "NSX": ["Suspension", "Suspension"], "Shuttle": ["Suspension", "Suspension"], "Accord-MK10": ["Suspension"], "Accord-MK4": ["Suspension"], "Brio": ["Suspension"], "City": ["Suspension"], "Civic-MK11": ["Suspension"]}, "Jeep": {"Gladiator": ["Exhaust-Systems", "Suspension"], "Renegade": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Cherokee": ["Suspension", "Suspension", "Suspension", "Suspension"], "Commander": ["Suspension", "Suspension"], "Grand-Cherokee": ["Suspension", "Suspension", "Suspension"], "Compass": ["Suspension", "Suspension"], "Patriot": ["Suspension", "Suspension"], "Wrangler": ["Suspension", "Suspension"]}, "Jaguar": {"I-PACE-X590": ["Exhaust-Systems", "Suspension"], "X-Type-CF1": ["Suspension", "Suspension", "Suspension"], "F-Pace-X761": ["Suspension", "Suspension", "Suspension"], "XE-X760": ["Suspension"], "XF-X250": ["Suspension", "Suspension"], "E-Pace-X540": ["Suspension", "Suspension"], "F-Type-S-QQ6": ["Suspension", "Suspension"], "S-Type-CCX": ["Suspension", "Suspension"], "XF-X260": ["Suspension", "Suspension"], "XJ8-XJR-X308": ["Suspension"], "XK-X150": ["Suspension", "Suspension"], "XK8-XKR-X100": ["Suspension", "Suspension"], "XJ-XJR-XJ-X300": ["Suspension"]}, "Kia": {"Stinger": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Sportage-MK4": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Sportage-MK3": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Cee'd-+-Pro-Cee'd-MK1-ED": ["Suspension", "Suspension", "Suspension", "Suspension"], "Cee'd-+-Pro-Cee'd-MK2-JD": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Optima-MK5": ["Suspension"], "Cee'd-+-Pro-Cee'd-MK3-CD": ["Suspension", "Suspension", "Suspension"], "Sorento-MK1": ["Suspension", "Suspension", "Suspension", "Suspension"], "Sorento-MK2": ["Suspension", "Suspension", "Suspension", "Suspension"], "Sorento-MK3": ["Suspension", "Suspension", "Suspension", "Suspension"], "Sorento-MK4": ["Suspension", "Suspension", "Suspension"], "Rio-MK3": ["Suspension", "Suspension"], "Picanto": ["Suspension", "Suspension"], "Venga": ["Suspension", "Suspension"], "Rio-MK4": ["Suspension", "Suspension"], "Stonic": ["Suspension", "Suspension", "Suspension"], "Cadenza": ["Suspension"], "Soul": ["Suspension", "Suspension"], "EV6": ["Suspension", "Suspension"], "Sportage-MK5": ["Suspension", "Suspension"], "Optima-MK4": ["Suspension", "Suspension"], "Optima-MK3": ["Suspension", "Suspension"], "Carnival-Sedona": ["Suspension"], "Carens": ["Suspension", "Suspension"], "Sportage-MK2": ["Suspension", "Suspension"], "Rio-MK2": ["Suspension", "Suspension"], "Cerato": ["Suspension", "Suspension"], "Niro": ["Suspension"], "Sportage-MK1": ["Suspension", "Suspension"], "Clarus": ["Suspension", "Suspension"], "Pride": ["Suspension", "Suspension"], "Rocsta": ["Suspension"], "Sephia": ["Suspension", "Suspension"], "Shuma": ["Suspension"], "Joice-Carstar": ["Suspension"], "Magentis": ["Suspension"], "Oprius": ["Suspension"], "Rio-MK1": ["Suspension"]}, "Lamborghini": {"Urus": ["Exhaust-Systems"], "Gallardo": ["Exhaust-Systems", "Suspension", "Suspension"], "Huracan": ["Exhaust-Systems", "Suspension"], "Aventador": ["Exhaust-Systems"]}, "LandRover": {"Discovery-MK5": ["Suspension", "Suspension"], "Range-Rover-Sport-MK2": ["Suspension", "Exhaust-Systems", "Suspension"], "Velar": ["Suspension", "Suspension"], "Range-Rover-MK4": ["Suspension", "Suspension"], "Defender": ["Exhaust-Systems", "Suspension"], "Evoque-MK1": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Discovery-Sport": ["Suspension", "Suspension", "Suspension"], "Evoque-MK2": ["Suspension", "Suspension"], "Freelander": ["Suspension", "Suspension"], "Discovery-MK3-MK4": ["Suspension"], "Range-Rover-MK3": ["Suspension"], "Range-Rover-Sport-MK1": ["Suspension"], "Range-Rover-MK2": ["Suspension"]}, "McLaren": {"720S": ["Exhaust-Systems"], "540C": ["Exhaust-Systems"], "570S": ["Exhaust-Systems"], "650S": ["Exhaust-Systems"], "12C": ["Exhaust-Systems"]}, "Mitsubishi": {"Lancer": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "ASX-GA0": ["Suspension", "Suspension", "Suspension", "Suspension"], "Galant": ["Suspension", "Suspension", "Suspension"], "Eclipse": ["Suspension", "Suspension", "Suspension"], "Space-Star": ["Suspension", "Suspension"], "Colt": ["Suspension", "Suspension"], "Carisma-DA0": ["Suspension", "Suspension"], "Outlander": ["Suspension", "Suspension"], "Pajero": ["Suspension", "Suspension", "Suspension"], "L200": ["Suspension"], "3000-GT": ["Suspension"], "Grandis": ["Suspension", "Suspension"], "Saporo": ["Suspension"], "Sigma": ["Suspension"], "Space-Gear": ["Suspension"], "Space-Runner": ["Suspension"], "Space-Wagon": ["Suspension", "Suspension"], "i-Miev": ["Suspension"], "Mirage": ["Suspension"]}, "Nissan": {"350Z": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "GT-R": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "370Z": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Micra": ["Suspension", "Suspension", "Suspension", "Suspension"], "Figaro": ["Suspension"], "Sunny": ["Suspension", "Suspension", "Suspension"], "100NX": ["Suspension", "Suspension", "Suspension"], "Qashqai": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "X-Trail": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Juke": ["Suspension", "Suspension", "Suspension"], "Note": ["Suspension", "Suspension"], "Primera": ["Suspension", "Suspension"], "Cube": ["Suspension", "Suspension"], "Tiida": ["Suspension"], "Pulsar": ["Suspension", "Suspension"], "Leaf": ["Suspension", "Suspension"], "Almera": ["Suspension", "Suspension"], "Townstar": ["Suspension", "Suspension"], "Murano": ["Suspension", "Suspension"], "Navara": ["Suspension", "Suspension"], "Pathfinder": ["Suspension", "Suspension"], "Patrol": ["Suspension"], "Pick-Up": ["Suspension"], "200SX": ["Suspension", "Suspension", "Suspension"], "300ZX": ["Suspension"], "Bluebird": ["Suspension"], "Maxima": ["Suspension", "Suspension"], "Terrano": ["Suspension", "Suspension"], "Cherry-Sunny": ["Suspension"], "Kubistar": ["Suspension"], "Pixo": ["Suspension"], "Primastar": ["Suspension"], "Sylphy": ["Suspension"], "NV300": ["Suspension"]}, "Renault": {"Clio-C": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "Megane-II": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "Clio-B": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "Megane-IV": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Megane-III": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "R19": ["Suspension", "Suspension", "Suspension"], "Clio-A": ["Suspension", "Suspension", "Suspension"], "Clio-D": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Megane-I": ["Suspension", "Suspension", "Suspension"], "R5": ["Suspension", "Suspension", "Suspension"], "Twingo": ["Suspension", "Suspension", "Suspension", "Suspension"], "Kadjar": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Fluence": ["Suspension"], "Scenic": ["Suspension", "Suspension"], "Wind": ["Suspension", "Suspension"], "Laguna": ["Suspension", "Suspension"], "Captur": ["Suspension", "Suspension"], "Arkana": ["Suspension", "Suspension"], "Zoe": ["Suspension", "Suspension"], "Talisman": ["Suspension", "Suspension", "Suspension"], "Espace": ["Suspension", "Suspension"], "Koleos": ["Suspension", "Suspension"], "Alaskan": ["Suspension"], "Clio-E": ["Suspension", "Suspension"], "Kangoo": ["Suspension", "Suspension"], "Latitude": ["Suspension", "Suspension"], "Modus": ["Suspension", "Suspension"], "R21": ["Suspension"], "R9": ["Suspension"], "Safrane": ["Suspension"], "Trafic": ["Suspension", "Suspension"]}, "Scion": {"FR-S": ["Exhaust-Systems"]}, "Subaru": {"Impreza": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "BRZ": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Forester": ["Suspension", "Suspension"], "Trezia": ["Suspension"], "XV": ["Suspension", "Suspension", "Suspension"], "Levorg": ["Suspension", "Suspension"], "Justy": ["Suspension", "Suspension"], "Legacy": ["Suspension", "Suspension", "Suspension", "Suspension"], "Dex": ["Suspension"]}, "Suzuki": {"Swift": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Ignis": ["Suspension", "Suspension"], "Vitara": ["Suspension", "Suspension", "Suspension"], "Jimny": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "SX4": ["Suspension", "Suspension"], "Ertiga": ["Suspension"], "Swace": ["Suspension"], "Splash": ["Suspension", "Suspension"], "Grand-Vitara": ["Suspension", "Suspension"], "Kizashi": ["Suspension", "Suspension"], "Baleno": ["Suspension", "Suspension"], "LJ-SJ": ["Suspension"], "Samurai": ["Suspension"], "SX4-S-Cross": ["Suspension", "Suspension"], "Alto": ["Suspension"], "Liana-Baleno": ["Suspension"], "Wagon-R": ["Suspension"]}, "Tesla": {"Model-3": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "Model-S": ["Exhaust-Systems", "Suspension", "Suspension"], "Model-X": ["Exhaust-Systems"], "Model-Y": ["Exhaust-Systems", "Suspension", "Suspension"]}, "Volkswagen": {"Amarok-2H": ["Exhaust-Systems", "Suspension"], "Arteon-3H": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Beetle-16": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "Bora-1J-Jetta-MK4": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Bus-T5": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "Bus-T6": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Caddy-2K": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension"], "Corrado-53i": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Golf-MK1": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Golf-MK2": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Golf-MK4": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Golf-MK5": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Golf-MK6": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Golf-MK7": ["Exhaust-Systems", "Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Golf-MK8": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Jetta-MK5": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Jetta-MK6": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Jetta-MK7": ["Exhaust-Systems"], "Polo-6R": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Polo-9N-9N3": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Polo-AW": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Scirocco-MK3": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Tiguan-AD1": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "T-Roc-A1": ["Exhaust-Systems", "Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Up-AA": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Golf-MK3": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Lupo-6X-6ES": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Polo-6N-6N2-6KV": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Scirocco-MK1-MK2": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Vento-1HX0-Jetta-MK3": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "K\u00c3\u00a4fer": ["Suspension", "Suspension", "Suspension"], "Beetle-1C-1Y-9C": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Passat-B5": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Eos-1F": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Passat-B6-B7-+-CC": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Touran-1T": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Passat-B4": ["Suspension", "Suspension", "Suspension", "Suspension"], "Polo-86C": ["Suspension", "Suspension", "Suspension", "Suspension"], "Passat-B8": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Touran-5T": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Jetta-MK2": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Tiguan-5N": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "T-Cross-C1": ["Suspension", "Suspension", "Suspension", "Suspension"], "Caddy-SB": ["Suspension", "Suspension", "Suspension", "Suspension"], "ID.3": ["Suspension", "Suspension", "Suspension"], "Sharan-7N": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Jetta-MK1": ["Suspension", "Suspension", "Suspension"], "Fox-5Z": ["Suspension", "Suspension", "Suspension", "Suspension"], "Gol": ["Suspension"], "Taigo-CS": ["Suspension", "Suspension", "Suspension"], "Bus-T4": ["Suspension", "Suspension", "Suspension", "Suspension"], "Bus-T7": ["Suspension", "Suspension"], "Touareg-7L": ["Suspension", "Suspension", "Suspension"], "ID.4": ["Suspension", "Suspension"], "Sharan-7M": ["Suspension", "Suspension", "Suspension"], "ID.5": ["Suspension", "Suspension"], "Phaeton": ["Suspension"], "Touareg-CR": ["Suspension", "Suspension"], "Touareg-7P": ["Suspension", "Suspension"], "Bus-T3": ["Suspension", "Suspension", "Suspension"], "Passat-B2": ["Suspension", "Suspension"], "Taro": ["Suspension"], "Passat-B3": ["Suspension"]}, "Abarth": {"595-500": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "500-312": ["Exhaust-Systems"], "124-Spider": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Grande-Punto-199": ["Suspension", "Suspension", "Suspension"]}, "Fiat": {"124-Spider": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "500-312": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Cinquecento-Seicento": ["Suspension", "Suspension", "Suspension", "Suspension"], "Punto-176": ["Suspension", "Suspension", "Suspension"], "Punto-188": ["Suspension", "Suspension", "Suspension", "Suspension"], "Brava-Bravo": ["Suspension", "Suspension", "Suspension", "Suspension"], "Tipo-Tempra": ["Suspension", "Suspension", "Suspension"], "Barchetta": ["Suspension", "Suspension", "Suspension", "Suspension"], "Uno-146A": ["Suspension", "Suspension", "Suspension"], "Grande-Punto-199": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Stilo-192": ["Suspension", "Suspension", "Suspension", "Suspension"], "Panda": ["Suspension", "Suspension", "Suspension"], "Linea": ["Suspension"], "Idea": ["Suspension", "Suspension"], "Sedici": ["Suspension"], "Coupe": ["Suspension", "Suspension"], "Croma": ["Suspension", "Suspension", "Suspension"], "Ulysse-Scudo": ["Suspension", "Suspension"], "500-332": ["Suspension", "Suspension"], "Fullback": ["Suspension"], "Talento": ["Suspension", "Suspension"], "Freemont": ["Suspension", "Suspension"], "Multipla": ["Suspension"], "Palio": ["Suspension", "Suspension"]}, "Maserati": {"Ghibli": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension"], "MC20": ["Suspension"], "3200GT": ["Suspension"], "Coupe-GT-GTS-GranTurismo": ["Suspension", "Suspension"], "Levante": ["Suspension"], "Quattroporte": ["Suspension", "Suspension"], "4200-Gran-Sport": ["Suspension"], "Grand-Convertible": ["Suspension"]}, "Mazda": {"CX3-DJ1": ["Exhaust-Systems", "Suspension", "Suspension"], "MX5-NC": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "MX5-ND": ["Exhaust-Systems", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "CX30-DM": ["Suspension", "Suspension", "Suspension"], "323-BF": ["Suspension", "Suspension"], "MX5-NA": ["Suspension", "Suspension", "Suspension", "Suspension"], "2-DJ": ["Suspension", "Suspension", "Suspension"], "3-BK": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "3-BM": ["Suspension", "Suspension", "Suspension", "Suspension"], "6-GG-GY-GG1": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "6-GH": ["Suspension", "Suspension", "Suspension", "Suspension"], "6-GJ-GL": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "CX5-KE": ["Suspension", "Suspension", "Suspension"], "CX5-KF": ["Suspension", "Suspension", "Suspension", "Suspension"], "MX5-NB": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "323-BG": ["Suspension", "Suspension", "Suspension"], "2-DE": ["Suspension", "Suspension", "Suspension"], "2-DY": ["Suspension", "Suspension", "Suspension", "Suspension"], "3-BL": ["Suspension", "Suspension", "Suspension", "Suspension"], "323-BA": ["Suspension", "Suspension"], "2-ZV": ["Suspension", "Suspension"], "5-CR": ["Suspension", "Suspension"], "5-CW": ["Suspension", "Suspension"], "3-BP": ["Suspension", "Suspension"], "RX8": ["Suspension", "Suspension", "Suspension", "Suspension"], "323-BJ": ["Suspension", "Suspension"], "Tribute": ["Suspension"], "B-Series": ["Suspension"], "121-DB": ["Suspension"], "121-JASM-JBSM": ["Suspension", "Suspension", "Suspension"], "626-GD-GV": ["Suspension", "Suspension"], "626-GE-GF-GW": ["Suspension", "Suspension"], "929": ["Suspension"], "BT-50-B2500": ["Suspension"], "CX7-ER": ["Suspension", "Suspension", "Suspension"], "Demio-DW": ["Suspension", "Suspension"], "MPV": ["Suspension"], "MX3-EC": ["Suspension", "Suspension"], "MX30-DR": ["Suspension", "Suspension"], "MX6-GE": ["Suspension", "Suspension"], "Premacy": ["Suspension"], "RX7": ["Suspension"], "Xedos-6": ["Suspension", "Suspension"], "Xedos-9": ["Suspension"], "626-GC": ["Suspension"], "CX60": ["Suspension"], "RX8-SE": ["Suspension"]}, "MINI": {"F54-F55-F56-F57-F60-14-": ["Exhaust-Systems"], "R50-R52-R53-01-06": ["Exhaust-Systems"], "R55-R56-R57-R58-R59-R60-R61-06-16": ["Exhaust-Systems"]}, "Chevrolet": {"Corvette-C8": ["Exhaust-Systems", "Suspension"], "Corvette-C7": ["Exhaust-Systems"], "Corvette-C6": ["Exhaust-Systems", "Suspension", "Suspension"], "Aveo": ["Suspension", "Suspension"], "Cruze": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Camaro-MK6": ["Suspension", "Suspension", "Suspension"], "Trax-Tracker": ["Suspension", "Suspension"], "Nexia-Espero": ["Suspension", "Suspension", "Suspension"], "Malibu": ["Suspension"], "Camaro-MK5": ["Suspension", "Suspension", "Suspension", "Suspension"], "Captiva": ["Suspension", "Suspension"], "Blazer-": ["Suspension"], "Corvette-C5": ["Suspension"], "Lanos": ["Suspension", "Suspension"], "Nubira": ["Suspension", "Suspension"], "Orlando": ["Suspension", "Suspension"], "TrailBlazer": ["Suspension"], "Epica": ["Suspension"], "Evanda-Leganza": ["Suspension"], "Kalos-Lanos-Aveo": ["Suspension"], "Lacetti": ["Suspension"], "Matiz": ["Suspension"], "Spark": ["Suspension"]}, "Ferrari": {"488-GTB": ["Exhaust-Systems", "Suspension", "Suspension"], "599-GTB": ["Suspension", "Suspension", "Suspension"], "308-GTB-S-": ["Suspension"], "328-GTB-S": ["Suspension"], "348-TB-TS-GTB-GTS-": ["Suspension", "Suspension"], "456GT": ["Suspension", "Suspension"], "458-Italia": ["Suspension", "Suspension"], "812": ["Suspension"], "California": ["Suspension", "Suspension"], "F355": ["Suspension", "Suspension"], "F360-Modena": ["Suspension", "Suspension"], "F430": ["Suspension", "Suspension"], "F512": ["Suspension"], "F550-Maranello": ["Suspension"], "F575-M-Maranello": ["Suspension"], "F8": ["Suspension"], "Mondial": ["Suspension"], "Roma": ["Suspension"], "Testarossa": ["Suspension"]}, "Chrysler": {"300C": ["Suspension", "Suspension", "Suspension", "Suspension"], "Crossfire": ["Suspension", "Suspension", "Suspension", "Suspension"], "PT-Cruiser": ["Suspension", "Suspension", "Suspension"], "Neon": ["Suspension", "Suspension"], "Sebring-Stratus": ["Suspension", "Suspension"], "Aspen": ["Suspension"], "300M": ["Suspension", "Suspension"], "Vision": ["Suspension", "Suspension"], "Voyager": ["Suspension"]}, "Dacia": {"Logan": ["Suspension", "Suspension", "Suspension", "Suspension"], "Duster": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "Sandero": ["Suspension", "Suspension"], "Dokker": ["Suspension"], "Lodgy": ["Suspension"], "Jogger": ["Suspension", "Suspension"], "Spring": ["Suspension"]}, "Daihatsu": {"Copen": ["Suspension"], "Materia": ["Suspension", "Suspension", "Suspension"], "Charade": ["Suspension", "Suspension"], "Sirion": ["Suspension", "Suspension"], "Trevis": ["Suspension"], "Applause": ["Suspension", "Suspension"], "Feroza": ["Suspension"], "Grand-Move": ["Suspension"], "Rocky": ["Suspension"], "Terios": ["Suspension"]}, "Lancia": {"Delta": ["Suspension", "Suspension", "Suspension", "Suspension"], "Y": ["Suspension", "Suspension"], "Phedra": ["Suspension", "Suspension"], "Prisma": ["Suspension", "Suspension"], "Zeta": ["Suspension", "Suspension"], "Dedra": ["Suspension", "Suspension"], "Kappa": ["Suspension"], "Lybra": ["Suspension", "Suspension"], "Musa": ["Suspension", "Suspension"], "Thema": ["Suspension", "Suspension"], "Flavia": ["Suspension"]}, "Rover": {"25": ["Suspension", "Suspension", "Suspension"], "45": ["Suspension", "Suspension"], "200-400": ["Suspension", "Suspension", "Suspension"], "600": ["Suspension", "Suspension"], "800": ["Suspension"], "75": ["Suspension"]}, "Saab": {"9000": ["Suspension", "Suspension"], "900": ["Suspension", "Suspension"], "09.05.23": ["Suspension", "Suspension", "Suspension"], "09.03.23": ["Suspension", "Suspension", "Suspension"], "Alhambra-7N": ["Suspension"]}, "Volvo": {"S80-T": ["Suspension", "Suspension", "Suspension"], "V70-S": ["Suspension", "Suspension", "Suspension", "Suspension"], "850": ["Suspension", "Suspension", "Suspension"], "S40-V40-V": ["Suspension", "Suspension", "Suspension"], "S70-V70-L": ["Suspension", "Suspension", "Suspension"], "V40-M": ["Suspension", "Suspension", "Suspension", "Suspension", "Suspension"], "S40-V50-M": ["Suspension", "Suspension", "Suspension", "Suspension"], "S60-V60-Z": ["Suspension", "Suspension", "Suspension"], "XC60-U": ["Suspension", "Suspension"], "XC90-L": ["Suspension", "Suspension", "Suspension"], "C30-M": ["Suspension", "Suspension", "Suspension", "Suspension"], "S90-V90-P": ["Suspension", "Suspension", "Suspension"], "S60-V60-F": ["Suspension", "Suspension", "Suspension"], "XC40-X": ["Suspension", "Suspension"], "C70-M": ["Suspension", "Suspension"], "XC60-D": ["Suspension", "Suspension", "Suspension"], "S60-R": ["Suspension", "Suspension", "Suspension"], "S80-A": ["Suspension", "Suspension"], "V70-B": ["Suspension", "Suspension"], "XC70-B": ["Suspension", "Suspension"], "C40-X": ["Suspension", "Suspension"], "C70-N": ["Suspension", "Suspension"], "S90-V90-964": ["Suspension"], "XC70-S": ["Suspension"], "XC90-C": ["Suspension"], "340-360": ["Suspension"], "440-480": ["Suspension"], "S40-M": ["Suspension"], "V90-P": ["Suspension"]}, "Alpine": {"A110-AEF": ["Suspension", "Suspension"]}, "DS": {"DS3": ["Suspension"], "DS4": ["Suspension"], "DS7-Crossback": ["Suspension"]}, "Infiniti": {"EX": ["Suspension"], "FX": ["Suspension", "Suspension"], "G": ["Suspension"], "M": ["Suspension"], "Q": ["Suspension"]}, "Lada": {"110-111-112": ["Suspension"], "Samara": ["Suspension"], "Vesta": ["Suspension", "Suspension"]}, "Lexus": {"IS": ["Suspension", "Suspension"], "CT": ["Suspension"], "RX": ["Suspension", "Suspension"], "GS": ["Suspension", "Suspension"], "SC": ["Suspension"], "UX": ["Suspension", "Suspension"]}, "Lotus": {"Elise-Exige-S2": ["Suspension", "Suspension"], "Europa": ["Suspension"], "Elise-S1": ["Suspension"], "Esprit": ["Suspension"], "Evora": ["Suspension"]}, "Polestar": {"Polestar-2": ["Suspension", "Suspension"]}, "Proton": {"Iriz": ["Suspension"], "300-400": ["Suspension"], "Persona": ["Suspension", "Suspension"]}, "Smart": {"Fortwo-450": ["Suspension", "Suspension", "Suspension"], "Fortwo-451": ["Suspension", "Suspension", "Suspension"], "Fortwo-453": ["Suspension", "Suspension", "Suspension"], "Roadster-Coupe-452": ["Suspension", "Suspension", "Suspension"], "Forfour-453": ["Suspension", "Suspension"], "Forfour-454": ["Suspension", "Suspension"]}, "SsangYong": {"Korando": ["Suspension", "Suspension"], "Rexton": ["Suspension"], "Musso": ["Suspension"]}, "Cadillac": {"ATS": ["Suspension"], "BLS": ["Suspension", "Suspension"]}, "AstonMartin": {"DB11": ["Suspension", "Suspension"], "DB9": ["Suspension", "Suspension"], "Vanquish": ["Suspension", "Suspension"], "Vantage": ["Suspension", "Suspension"], "DBS": ["Suspension"]}, "Hummer": {"H2": ["Suspension"]}, "Isuzu": {"Amigo": ["Suspension"], "Trooper": ["Suspension"]}, "MG": {"F-FT": ["Suspension"], "F-TF": ["Suspension"]}, "Acura": {"RL": ["Suspension"]}, "Holden": {"Malibu": ["Suspension"], "Astra-H": ["Suspension"], "Captiva": ["Suspension"], "Barina": ["Suspension"], "Epica": ["Suspension"], "Cruze": ["Suspension"], "Trax-Tracker": ["Suspension"], "Commodore": ["Suspension"]}}];
-    var mfgArr = [{% for link in shop.metafields.manufacturer.handle1 %}"{{link.value}}",{% endfor %}{% for link in shop.metafields.manufacturer.handle2 %}"{{link.value}}",{% endfor %}{% for link in shop.metafields.manufacturer.handle3 %}"{{link.value}}",{% endfor %}];
-    var arr, current_field, dropdown_val1, dropdown_val2, dropdown_val3, dropdown_val4,search_tag,tagstr,newtext;
-    
-    console.log("menuArr ::"+JSON.stringify(menuArr));  
-    console.log("mfgArr :: "+mfgArr);     
-    disableSearch();
-    //Out side click
-    $(document).on("click", function(event){
-        var $trigger = $(".dropdown");
-        if($trigger !== event.target && !$trigger.has(event.target).length){          
+  var menuArr = [{
+      "Audi": {
+          "TT-TTS-TTRS-8S": ["Exhaust-Systems", "Suspension"],
+          "S1-8X": ["Exhaust-Systems", "Suspension"],
+          "S4-B9": ["Exhaust-Systems", "Suspension"],
+          "S5-5F": ["Exhaust-Systems", "Suspension"],
+          "A1-8X": ["Exhaust-Systems", "Suspension"],
+          "RS3-8V": ["Exhaust-Systems", "Suspension"],
+          "A3-8V": ["Exhaust-Systems", "Suspension"],
+          "Q2-GA": ["Exhaust-Systems", "Suspension"],
+          "Q3-F3": ["Exhaust-Systems", "Suspension"],
+          "SQ2-GA": ["Exhaust-Systems", "Suspension"],
+          "A3-8P": ["Exhaust-Systems", "Suspension"],
+          "TT-TTS-TTRS-8J": ["Exhaust-Systems", "Suspension"],
+          "S3-8V": ["Exhaust-Systems", "Suspension"],
+          "A1-GB": ["Exhaust-Systems", "Suspension"],
+          "RSQ3-F3": ["Exhaust-Systems", "Suspension"],
+          "RS3-8Y": ["Exhaust-Systems", "Suspension"],
+          "A4-B8": ["Exhaust-Systems", "Suspension"],
+          "A4-B9": ["Exhaust-Systems", "Suspension"],
+          "A5-8T": ["Exhaust-Systems", "Suspension"],
+          "A5-F5": ["Exhaust-Systems", "Suspension"],
+          "RS4-B8": ["Exhaust-Systems", "Suspension"],
+          "RS5-8T": ["Exhaust-Systems", "Suspension"],
+          "S4-B8": ["Exhaust-Systems", "Suspension"],
+          "S5-8T": ["Exhaust-Systems", "Suspension"],
+          "TT-TTS-8N": ["Exhaust-Systems", "Suspension"],
+          "A3-8L": ["Exhaust-Systems", "Suspension"],
+          "A4-B6": ["Exhaust-Systems", "Suspension"],
+          "A4-B7": ["Exhaust-Systems", "Suspension"],
+          "A6-4G-C7": ["Exhaust-Systems", "Suspension"],
+          "A6-F2-C8": ["Exhaust-Systems", "Suspension"],
+          "A7-4G-4G1-C7": ["Exhaust-Systems", "Suspension"],
+          "A7-F2-C8": ["Exhaust-Systems", "Suspension"],
+          "Q7-4L": ["Exhaust-Systems", "Suspension"],
+          "Q7-4M": ["Exhaust-Systems", "Suspension"],
+          "Q8-4M": ["Exhaust-Systems", "Suspension"],
+          "R8-42": ["Exhaust-Systems", "Suspension"],
+          "RS3-8P": ["Exhaust-Systems", "Suspension"],
+          "RS4-B5": ["Exhaust-Systems", "Suspension"],
+          "RS4-B7": ["Exhaust-Systems", "Suspension"],
+          "RS4-B9": ["Exhaust-Systems", "Suspension"],
+          "RS6-4B-C5": ["Exhaust-Systems", "Suspension"],
+          "RS6-4F-C6": ["Exhaust-Systems", "Suspension"],
+          "RS6-4G-C7": ["Suspension", "Exhaust-Systems"],
+          "RS6-F2-C8": ["Exhaust-Systems", "Suspension"],
+          "RS7-4G-C7": ["Suspension", "Exhaust-Systems"],
+          "RS7-F2-C8": ["Exhaust-Systems", "Suspension"],
+          "RSQ8-4M": ["Exhaust-Systems", "Suspension"],
+          "S3-8L": ["Exhaust-Systems", "Suspension"],
+          "S3-8P": ["Exhaust-Systems", "Suspension"],
+          "S3-8Y": ["Exhaust-Systems", "Suspension"],
+          "S4-B6": ["Exhaust-Systems", "Suspension"],
+          "S4-B7": ["Exhaust-Systems", "Suspension"],
+          "S6-4F-C6": ["Exhaust-Systems", "Suspension"],
+          "S6-4G-C7": ["Exhaust-Systems", "Suspension"],
+          "S6-F2-C8": ["Exhaust-Systems", "Suspension"],
+          "S7-4G-C7": ["Exhaust-Systems"],
+          "S7-F2-C8": ["Exhaust-Systems", "Suspension"],
+          "S8-D4-4H": ["Exhaust-Systems", "Suspension"],
+          "S8-D5-4N": ["Exhaust-Systems", "Suspension"],
+          "SQ5-8R1": ["Exhaust-Systems", "Suspension"],
+          "SQ5-FY": ["Exhaust-Systems", "Suspension"],
+          "SQ7-4M": ["Exhaust-Systems", "Suspension"],
+          "SQ8-4M": ["Exhaust-Systems", "Suspension"],
+          "Urquattro-85": ["Exhaust-Systems", "Suspension"],
+          "RS5-F5": ["Exhaust-Systems", "Suspension"],
+          "80-B4": ["Suspension"],
+          "80-90-B2": ["Suspension"],
+          "80-90-B3": ["Suspension"],
+          "A4-B5": ["Suspension"],
+          "A6-4F-C6": ["Suspension"],
+          "Q5-8R": ["Suspension"],
+          "A3-8Y": ["Suspension"],
+          "Q3-8U-8U1": ["Suspension"],
+          "RSQ3-8U-8U1": ["Suspension"],
+          "A6-4B-C5": ["Suspension"],
+          "Q5-FY": ["Suspension"],
+          "A4-8H-Convertible": ["Suspension"],
+          "S4-B5": ["Suspension"],
+          "100-A6-C4": ["Suspension"],
+          "Q4-e-tron-FZ": ["Suspension"],
+          "A8-D2-4D": ["Suspension"],
+          "A2-8Z": ["Suspension"],
+          "A8-D3-4E": ["Suspension"],
+          "A8-D4-4H": ["Suspension"],
+          "100-C3": ["Suspension"],
+          "200-44": ["Suspension"],
+          "A8-8H-D4": ["Suspension"],
+          "A8-D4-8H": ["Suspension"],
+          "A8-D5-F8": ["Suspension"],
+          "e-tron-GE": ["Suspension"],
+          "e-tron-GT-FW": ["Suspension"],
+          "S6-4B-C5": ["Suspension"],
+          "S8-D2-4D": ["Suspension"],
+          "S8-D3-4E": ["Suspension"],
+          "50-86": ["Suspension"],
+          "Coupe-89": ["Suspension"],
+          "RS2-P1": ["Suspension"],
+          "S2-B4": ["Suspension"],
+          "S4-C4": ["Suspension"],
+          "S6-C4": ["Suspension"],
+          "V8-D11-C4": ["Suspension"],
+          "A5-B8": ["Suspension"]
+      },
+      "BMW": {
+          "F20-F21-1series": ["Exhaust-Systems", "Body-Parts", "Suspension"],
+          "F30-F31-F34-3series": ["Exhaust-Systems", "Body-Parts", "Suspension"],
+          "F22-F23-2series": ["Exhaust-Systems", "Body-Parts", "Suspension"],
+          "F32-F33-F36-4series": ["Exhaust-Systems", "Body-Parts", "Suspension"],
+          "F87-M2": ["Exhaust-Systems", "Body-Parts", "Suspension"],
+          "G11-G12-7series": ["Exhaust-Systems", "Suspension"],
+          "G30-G31-5series": ["Exhaust-Systems", "Suspension"],
+          "F45-F46-2series-Tourer": ["Exhaust-Systems", "Suspension"],
+          "F48-X1": ["Exhaust-Systems", "Suspension"],
+          "E81-E82-E87-E88-1series": ["Exhaust-Systems", "Suspension"],
+          "E90-E91-E92-E93-3series": ["Exhaust-Systems", "Suspension"],
+          "F80-M3": ["Exhaust-Systems", "Body-Parts", "Suspension"],
+          "F82-F83-M4": ["Exhaust-Systems", "Body-Parts", "Suspension"],
+          "F39-X2": ["Exhaust-Systems", "Suspension"],
+          "F40-1series": ["Exhaust-Systems", "Suspension"],
+          "G14-G15-G16-8series": ["Exhaust-Systems", "Suspension"],
+          "G20-G21-3series": ["Exhaust-Systems", "Suspension"],
+          "G29-Z4": ["Exhaust-Systems", "Suspension"],
+          "G32-6series-GT": ["Exhaust-Systems", "Suspension"],
+          "G80-M3": ["Exhaust-Systems", "Body-Parts", "Suspension"],
+          "G82-G83-M4": ["Exhaust-Systems", "Body-Parts", "Suspension"],
+          "F97-X3M": ["Exhaust-Systems", "Suspension"],
+          "F98-X4M": ["Exhaust-Systems", "Suspension"],
+          "E30-3series": ["Exhaust-Systems", "Suspension"],
+          "E30-M3": ["Exhaust-Systems", "Suspension"],
+          "E31-8series": ["Exhaust-Systems", "Suspension"],
+          "E32-7series": ["Exhaust-Systems", "Suspension"],
+          "E34-5series": ["Exhaust-Systems", "Suspension"],
+          "E34-M5": ["Exhaust-Systems", "Suspension"],
+          "E36-3series": ["Exhaust-Systems", "Suspension"],
+          "E36-M3": ["Exhaust-Systems", "Suspension"],
+          "E38-7series": ["Exhaust-Systems", "Suspension"],
+          "E39-5series": ["Exhaust-Systems", "Suspension"],
+          "E39-M5": ["Exhaust-Systems", "Suspension"],
+          "E46-3series": ["Exhaust-Systems", "Suspension"],
+          "E46-M3": ["Exhaust-Systems", "Suspension"],
+          "E52-Z8": ["Exhaust-Systems", "Suspension"],
+          "E60-E61-5series": ["Exhaust-Systems", "Suspension"],
+          "E60-E61-M5": ["Exhaust-Systems", "Suspension"],
+          "E63-E64-6series": ["Exhaust-Systems", "Suspension"],
+          "E63-E64-M6": ["Exhaust-Systems", "Suspension"],
+          "E70-X5-+-X5M": ["Exhaust-Systems", "Suspension"],
+          "E71-X6-+-X6M": ["Exhaust-Systems", "Suspension"],
+          "E82-M-Coupe-1series": ["Exhaust-Systems", "Suspension"],
+          "E85-E86-Z4-M-Roadster-+-M-Coupe": ["Exhaust-Systems", "Suspension"],
+          "E85-E86-Z4-Roadster-+-Coupe": ["Exhaust-Systems", "Suspension"],
+          "E89-Z4": ["Exhaust-Systems", "Suspension"],
+          "E90-E92-E93-M3": ["Exhaust-Systems", "Suspension"],
+          "F06-F12-F13-6series": ["Exhaust-Systems", "Suspension"],
+          "F06-F12-F13-M6": ["Exhaust-Systems", "Suspension"],
+          "F07-F10-F11-5series": ["Exhaust-Systems", "Suspension"],
+          "F10-M5": ["Exhaust-Systems", "Suspension"],
+          "F85-X5M": ["Exhaust-Systems", "Suspension"],
+          "F86-X6M": ["Exhaust-Systems", "Suspension"],
+          "F90-M5": ["Exhaust-Systems", "Body-Parts", "Suspension"],
+          "F91-F92-F93-M8": ["Exhaust-Systems", "Body-Parts", "Suspension"],
+          "F95-X5M": ["Exhaust-Systems", "Suspension"],
+          "F96-X6M": ["Exhaust-Systems", "Suspension"],
+          "G06-X6": ["Exhaust-Systems", "Suspension"],
+          "G22-G23-G26-4series": ["Exhaust-Systems", "Suspension"],
+          "Z3": ["Exhaust-Systems", "Suspension"],
+          "Z3-M-Roadster-+-M-Coupe": ["Exhaust-Systems", "Suspension"],
+          "G42-2series": ["Exhaust-Systems", "Suspension"],
+          "i8": ["Exhaust-Systems", "Suspension"],
+          "E65-E66-7series": ["Exhaust-Systems", "Suspension"],
+          "F25-X3": ["Exhaust-Systems", "Suspension"],
+          "F26-X4": ["Exhaust-Systems", "Suspension"],
+          "F44-2series-Gran-Coupe": ["Exhaust-Systems", "Suspension"],
+          "E23-7series": ["Suspension"],
+          "Z1": ["Suspension"],
+          "E10-02series": ["Suspension"],
+          "E12-5series": ["Suspension"],
+          "E21-3series": ["Suspension"],
+          "E24-6series": ["Suspension"],
+          "E28-5series": ["Suspension"],
+          "F01-F02-7series": ["Suspension"],
+          "F15-X5": ["Suspension"],
+          "F16-X6": ["Suspension"],
+          "G01-X3": ["Suspension"],
+          "G02-X4": ["Suspension"],
+          "G05-X5": ["Suspension"],
+          "E84-X1": ["Suspension"],
+          "E53-X5": ["Suspension"],
+          "E83-X3": ["Suspension"],
+          "G26-i4": ["Suspension"],
+          "i3": ["Suspension"],
+          "G07-X7": ["Suspension"],
+          "E28-M5": ["Suspension"],
+          "U06-2series-Active-Tourer": ["Suspension"],
+          "iX-i20": ["Suspension"],
+          "F10-F11-5series": ["Suspension"]
+      },
+      "Citroen": {
+          "C4": ["Exhaust-Systems", "Suspension"],
+          "C5": ["Exhaust-Systems", "Suspension"],
+          "DS3": ["Exhaust-Systems", "Suspension"],
+          "DS4": ["Exhaust-Systems", "Suspension"],
+          "DS5": ["Exhaust-Systems"],
+          "AX": ["Suspension"],
+          "C1": ["Suspension"],
+          "Saxo": ["Suspension"],
+          "Xsara": ["Suspension"],
+          "Berlingo": ["Suspension"],
+          "C2": ["Suspension"],
+          "C3": ["Suspension"],
+          "C8": ["Suspension"],
+          "Evasion": ["Suspension"],
+          "Jumpy": ["Suspension"],
+          "C-Crosser": ["Suspension"],
+          "C-Zero": ["Suspension"],
+          "DS7-Crossback": ["Suspension"],
+          "Xantia": ["Suspension"],
+          "XM": ["Suspension"],
+          "ZX": ["Suspension"]
+      },
+      "Cupra": {
+          "Ateca-5FP": ["Exhaust-Systems", "Suspension"],
+          "Leon-5F": ["Exhaust-Systems"],
+          "Formentor": ["Exhaust-Systems", "Suspension"],
+          "Leon-KL": ["Exhaust-Systems", "Suspension"],
+          "Born": ["Suspension"]
+      },
+      "Ford": {
+          "Focus-MK2": ["Exhaust-Systems", "Suspension"],
+          "Focus-MK3": ["Exhaust-Systems", "Suspension"],
+          "Fiesta-MK7": ["Exhaust-Systems", "Suspension"],
+          "F150": ["Exhaust-Systems", "Suspension"],
+          "Fiesta-MK6": ["Exhaust-Systems", "Suspension"],
+          "Fiesta-MK8": ["Exhaust-Systems", "Suspension"],
+          "Focus-MK4": ["Exhaust-Systems", "Suspension"],
+          "Mondeo-MK3": ["Exhaust-Systems", "Suspension"],
+          "Mustang-MK6": ["Exhaust-Systems", "Suspension"],
+          "Mustang-Mach-E": ["Exhaust-Systems", "Suspension"],
+          "Puma": ["Exhaust-Systems", "Suspension"],
+          "Ranger": ["Exhaust-Systems", "Suspension"],
+          "Capri": ["Suspension"],
+          "Cougar": ["Suspension"],
+          "Escort": ["Suspension"],
+          "Fiesta-MK1": ["Suspension"],
+          "Fiesta-MK2": ["Suspension"],
+          "Fiesta-MK3": ["Suspension"],
+          "Fiesta-MK5": ["Suspension"],
+          "Fusion": ["Suspension"],
+          "Ka": ["Suspension"],
+          "Mondeo-MK2": ["Suspension"],
+          "Mustang-MK1": ["Suspension"],
+          "Mustang-MK5": ["Suspension"],
+          "Probe": ["Suspension"],
+          "Scorpio": ["Suspension"],
+          "Sierra": ["Suspension"],
+          "Mondeo-MK5": ["Suspension"],
+          "Ecosport": ["Suspension"],
+          "Bronco": ["Suspension"],
+          "Edge": ["Suspension"],
+          "Focus-MK1": ["Suspension"],
+          "C-Max": ["Suspension"],
+          "B-Max": ["Suspension"],
+          "Mondeo-MK4": ["Suspension"],
+          "Kuga-MK1": ["Suspension"],
+          "Kuga-MK2": ["Suspension"],
+          "Galaxy-": ["Suspension"],
+          "S-Max": ["Suspension"],
+          "Kuga-MK3": ["Suspension"],
+          "Tourneo--Transit-Custom": ["Suspension"],
+          "Fiesta-MK4": ["Suspension"],
+          "Explorer": ["Suspension"],
+          "Maverick": ["Suspension"],
+          "Mustang-MK4": ["Suspension"],
+          "Windstar": ["Suspension"],
+          "Escape": ["Suspension"],
+          "Mondeo-MK1": ["Suspension"]
+      },
+      "Hyundai": {
+          "i30-MK3": ["Exhaust-Systems", "Suspension"],
+          "i20-MK3": ["Exhaust-Systems", "Suspension"],
+          "Genesis": ["Exhaust-Systems", "Suspension"],
+          "ix35": ["Exhaust-Systems", "Suspension"],
+          "Kona": ["Exhaust-Systems", "Suspension"],
+          "Tucson-MK3": ["Exhaust-Systems", "Suspension"],
+          "Coupe": ["Suspension"],
+          "Elantra": ["Suspension"],
+          "i30-MK2": ["Suspension"],
+          "Veloster": ["Suspension"],
+          "Santa-Fe-MK3": ["Suspension"],
+          "Tucson-MK4": ["Suspension"],
+          "Santa-Fe-MK4": ["Suspension"],
+          "Accent-MK4": ["Suspension"],
+          "Solaris": ["Suspension"],
+          "i20-MK1": ["Suspension"],
+          "i20-MK2": ["Suspension"],
+          "i10-MK2": ["Suspension"],
+          "i30-MK1": ["Suspension"],
+          "i10-MK3": ["Suspension"],
+          "i40": ["Suspension"],
+          "Bayon": ["Suspension"],
+          "Sonata": ["Suspension"],
+          "Ioniq": ["Suspension"],
+          "Ioniq-5": ["Suspension"],
+          "Grandeur": ["Suspension"],
+          "ix20": ["Suspension"],
+          "Santa-Fe-MK2": ["Suspension"],
+          "Accent-MK3": ["Suspension"],
+          "i10-MK1": ["Suspension"],
+          "Santa-Fe-MK1": ["Suspension"],
+          "Tucson-MK1": ["Suspension"],
+          "Tucson-MK2": ["Suspension"],
+          "ix55": ["Suspension"],
+          "Veracruz": ["Suspension"],
+          "Galloper": ["Suspension"],
+          "Terracan": ["Suspension"],
+          "Atos": ["Suspension"],
+          "Getz": ["Suspension"],
+          "Lantra": ["Suspension"],
+          "Pony-MK3": ["Suspension"],
+          "Accent-MK1": ["Suspension"],
+          "Accent-MK2": ["Suspension"],
+          "Accent-MK5": ["Suspension"],
+          "Trajet": ["Suspension"]
+      },
+      "Mercedes": {
+          "A-Class-W176": ["Exhaust-Systems", "Suspension"],
+          "CLA-C117": ["Exhaust-Systems", "Suspension"],
+          "GLA-X156": ["Exhaust-Systems", "Suspension"],
+          "C-Class-W204-S204": ["Exhaust-Systems", "Suspension"],
+          "C-Class-W205-S205-C205-A205": ["Exhaust-Systems", "Suspension"],
+          "CLK-W208": ["Exhaust-Systems", "Suspension"],
+          "CLK-W209": ["Exhaust-Systems", "Suspension"],
+          "E-Class-Coupe-Convertible-W207": ["Exhaust-Systems", "Suspension"],
+          "E-Class-W210-S210": ["Exhaust-Systems", "Suspension"],
+          "E-Class-W211-S211": ["Exhaust-Systems", "Suspension"],
+          "E-Class-W212-S212": ["Exhaust-Systems", "Suspension"],
+          "S-Class-W140": ["Exhaust-Systems", "Suspension"],
+          "S-Class-W220": ["Exhaust-Systems", "Suspension"],
+          "SL-R107": ["Exhaust-Systems", "Suspension"],
+          "SL-R129": ["Exhaust-Systems", "Suspension"],
+          "SL-R230": ["Exhaust-Systems", "Suspension"],
+          "SL-R231": ["Exhaust-Systems", "Suspension"],
+          "W124": ["Exhaust-Systems", "Suspension"],
+          "G-Class-W463": ["Exhaust-Systems", "Suspension"],
+          "A-Class-W177-V177": ["Exhaust-Systems", "Suspension"],
+          "CLA-C118": ["Exhaust-Systems", "Suspension"],
+          "CLS-C218": ["Exhaust-Systems", "Suspension"],
+          "E-Class-W213-S213": ["Exhaust-Systems", "Suspension"],
+          "GLA-H247": ["Exhaust-Systems", "Suspension"],
+          "GLE-V167": ["Exhaust-Systems", "Suspension"],
+          "GLS-X167": ["Exhaust-Systems", "Suspension"],
+          "GT-GTS-GTR-C190-": ["Exhaust-Systems", "Suspension"],
+          "M-Class-GLE-W166-C292": ["Exhaust-Systems", "Suspension"],
+          "SLK-R170": ["Suspension"],
+          "C-Class-W203-S203": ["Suspension"],
+          "190-W201": ["Suspension"],
+          "B-Class-W246": ["Suspension"],
+          "GLK-X204": ["Suspension"],
+          "SLK-R171": ["Suspension"],
+          "C-Class-W202-S202": ["Suspension"],
+          "SLK-R172": ["Suspension"],
+          "B-Class-W247": ["Suspension"],
+          "X-Class-W470": ["Suspension"],
+          "GLB-X247": ["Suspension"],
+          "A-Class-W169": ["Suspension"],
+          "B-Class-W245": ["Suspension"],
+          "A-Class-W168": ["Suspension"],
+          "SLK-SLC-R172": ["Suspension"],
+          "C-Class-W206-S206": ["Suspension"],
+          "CLS-C219": ["Suspension"],
+          "S-Class-W126": ["Suspension"],
+          "E-Class-Coupe-Convertible-A238-C238-": ["Suspension"],
+          "GLC-C253-X253": ["Suspension"],
+          "Viano-Vito-W639": ["Suspension"],
+          "V-Class-Vito-W447-": ["Suspension"],
+          "M-Class-W164": ["Suspension"],
+          "CL-C215": ["Suspension"],
+          "M-Class-W163": ["Suspension"],
+          "Vaneo-W414": ["Suspension"],
+          "V-Class-Vito-W638": ["Suspension"],
+          "GL-X164": ["Suspension"],
+          "Citan-W415": ["Suspension"],
+          "Citan-W420": ["Suspension"],
+          "CL-C216": ["Suspension"],
+          "CLS-C257": ["Suspension"],
+          "EQC-N293": ["Suspension"],
+          "EQB-X243": ["Suspension"],
+          "GLS-X166": ["Suspension"],
+          "GT-4-Door-X290": ["Suspension"],
+          "GT-GTS-GTR-C190": ["Suspension"],
+          "MB100": ["Suspension"],
+          "R-Class-W251": ["Suspension"],
+          "S-Class-Coupe-C217": ["Suspension"],
+          "S-Class-W221": ["Suspension"],
+          "S-Class-W222": ["Suspension"],
+          "S-Class-W223": ["Suspension"],
+          "SLS-C197": ["Suspension"],
+          "W123": ["Suspension"],
+          "EQB": ["Suspension"],
+          "-8-W114-W115": ["Suspension"],
+          "S-Class-W116": ["Suspension"],
+          "S-Class-W108": ["Suspension"],
+          "SL-W121": ["Suspension"]
+      },
+      "Mini": {
+          "R55-R56-R57-R58-R59-R60-R61-06-16": ["Exhaust-Systems", "Suspension"],
+          "F54-F55-F56-F57-F60-14-": ["Exhaust-Systems", "Suspension"],
+          "R50-R52-R53-01-06": ["Exhaust-Systems", "Suspension"]
+      },
+      "Opel": {
+          "Corsa-D": ["Exhaust-Systems", "Suspension"],
+          "Astra-J": ["Exhaust-Systems", "Suspension"],
+          "Ascona": ["Suspension"],
+          "Astra-F": ["Suspension"],
+          "Astra-G": ["Suspension"],
+          "Corsa-A": ["Suspension"],
+          "Corsa-B": ["Suspension"],
+          "Kadett-D": ["Suspension"],
+          "Kadett-E": ["Suspension"],
+          "Tigra-A": ["Suspension"],
+          "Corsa-C": ["Suspension"],
+          "Tigra-Twin-Top": ["Suspension"],
+          "Vectra-B": ["Suspension"],
+          "Vectra-A": ["Suspension"],
+          "Calibra-A": ["Suspension"],
+          "Kadett-C": ["Suspension"],
+          "Manta": ["Suspension"],
+          "Astra-H": ["Suspension"],
+          "Monza": ["Suspension"],
+          "Senator": ["Suspension"],
+          "Signum": ["Suspension"],
+          "Vectra-C": ["Suspension"],
+          "Adam": ["Suspension"],
+          "Corsa-E": ["Suspension"],
+          "Omega-A": ["Suspension"],
+          "Omega-B": ["Suspension"],
+          "Insignia-A": ["Suspension"],
+          "GT": ["Suspension"],
+          "Speedster": ["Suspension"],
+          "Meriva-B": ["Suspension"],
+          "Astra-K": ["Suspension"],
+          "Astra-L": ["Suspension"],
+          "Cascada": ["Suspension"],
+          "Mokka-A": ["Suspension"],
+          "Zafira-C": ["Suspension"],
+          "Corsa-F": ["Suspension"],
+          "Mokka-B": ["Suspension"],
+          "Zafira-B": ["Suspension"],
+          "Crossland-X": ["Suspension"],
+          "Zafira-A": ["Suspension"],
+          "Insignia-B": ["Suspension"],
+          "Zafira-Life": ["Suspension"],
+          "Vivaro-C": ["Suspension"],
+          "Antara": ["Suspension"],
+          "Frontera": ["Suspension"],
+          "Monterey": ["Suspension"],
+          "Agila": ["Suspension"],
+          "Combo": ["Suspension"],
+          "Grandland-X": ["Suspension"],
+          "Meriva-A": ["Suspension"],
+          "Sintra": ["Suspension"],
+          "Vivaro-B": ["Suspension"],
+          "Karl-A": ["Suspension"],
+          "Vivaro-A": ["Suspension"]
+      },
+      "Peugeot": {
+          "207": ["Exhaust-Systems", "Suspension"],
+          "208": ["Exhaust-Systems", "Suspension"],
+          "308": ["Exhaust-Systems", "Suspension"],
+          "508": ["Exhaust-Systems", "Suspension"],
+          "3008": ["Exhaust-Systems", "Suspension"],
+          "5008": ["Exhaust-Systems", "Suspension"],
+          "RCZ": ["Exhaust-Systems", "Suspension"],
+          "205": ["Exhaust-Systems", "Suspension"],
+          "107": ["Suspension"],
+          "106": ["Suspension"],
+          "306": ["Suspension"],
+          "309": ["Suspension"],
+          "406": ["Suspension"],
+          "206": ["Suspension"],
+          "407": ["Suspension"],
+          "Partner-Ranch": ["Suspension"],
+          "108": ["Suspension"],
+          "307": ["Suspension"],
+          "1007": ["Suspension"],
+          "2008": ["Suspension"],
+          "4008": ["Suspension"],
+          "807": ["Suspension"],
+          "806": ["Suspension"],
+          "Expert": ["Suspension"],
+          "405": ["Suspension"],
+          "4007": ["Suspension"],
+          "605": ["Suspension"],
+          "607": ["Suspension"],
+          "i-On": ["Suspension"]
+      },
+      "Seat": {
+          "Ibiza-6J-6P": ["Exhaust-Systems", "Suspension"],
+          "Leon-5F": ["Exhaust-Systems", "Suspension"],
+          "Altea-5P": ["Exhaust-Systems", "Suspension"],
+          "Leon-1P": ["Exhaust-Systems", "Suspension"],
+          "Toledo-5P": ["Exhaust-Systems", "Suspension"],
+          "Ibiza-6L": ["Exhaust-Systems", "Suspension"],
+          "Leon-1M": ["Exhaust-Systems", "Suspension"],
+          "Ibiza-6F": ["Exhaust-Systems", "Suspension"],
+          "Leon-KL": ["Exhaust-Systems", "Suspension"],
+          "Arosa-6H": ["Suspension"],
+          "Cordoba-6K": ["Suspension"],
+          "Ibiza-6K": ["Suspension"],
+          "Toledo-1L": ["Suspension"],
+          "Toledo-1M": ["Suspension"],
+          "Ibiza-021A": ["Suspension"],
+          "Exeo-3R": ["Suspension"],
+          "Ateca-5FP": ["Suspension"],
+          "Tarraco-KN": ["Suspension"],
+          "Cordoba-6L": ["Suspension"],
+          "Mii-AA": ["Suspension"],
+          "Arona-KJ": ["Suspension"],
+          "Toledo-KG": ["Suspension"],
+          "Alhambra-7N": ["Suspension"],
+          "Alhambra-7MS": ["Suspension"]
+      },
+      "Skoda": {
+          "Octavia-5E": ["Exhaust-Systems", "Suspension"],
+          "Karoq-NU": ["Exhaust-Systems", "Suspension"],
+          "Superb-3V": ["Exhaust-Systems", "Suspension"],
+          "Octavia-1Z": ["Exhaust-Systems", "Suspension"],
+          "Superb-3T": ["Exhaust-Systems", "Suspension"],
+          "Octavia-NX": ["Exhaust-Systems", "Suspension"],
+          "Octavia-1U": ["Exhaust-Systems", "Suspension"],
+          "Fabia-NJ": ["Exhaust-Systems", "Suspension"],
+          "Fabia-6Y": ["Exhaust-Systems", "Suspension"],
+          "Fabia-5J": ["Suspension"],
+          "Kodiaq-NS": ["Suspension"],
+          "Citigo-AA": ["Suspension"],
+          "Rapid-NH": ["Suspension"],
+          "Scala-NW": ["Suspension"],
+          "Kamiq-NW": ["Suspension"],
+          "Fabia-PJ": ["Suspension"],
+          "Roomster-5J": ["Suspension"],
+          "Yeti-5L": ["Suspension"],
+          "Superb-3U": ["Suspension"],
+          "Enyaq-iV-NY": ["Suspension"],
+          "Felicia": ["Suspension"],
+          "Favorit-Forman": ["Suspension"],
+          "Praktik-5J": ["Suspension"]
+      },
+      "Toyota": {
+          "Supra": ["Exhaust-Systems", "Suspension"],
+          "GR-Yaris": ["Exhaust-Systems", "Suspension"],
+          "GT86": ["Exhaust-Systems", "Suspension"],
+          "Aygo": ["Suspension"],
+          "Yaris": ["Suspension"],
+          "Corolla": ["Suspension"],
+          "Starlet": ["Suspension"],
+          "Auris": ["Suspension"],
+          "Avensis": ["Suspension"],
+          "Paseo": ["Suspension"],
+          "Land-Cruiser": ["Suspension"],
+          "IQ": ["Suspension"],
+          "Vios": ["Suspension"],
+          "Verso": ["Suspension"],
+          "MR2": ["Suspension"],
+          "C-HR": ["Suspension"],
+          "Alphard": ["Suspension"],
+          "Celica": ["Suspension"],
+          "Prius": ["Suspension"],
+          "RAV-4": ["Suspension"],
+          "Urban-Cruiser": ["Suspension"],
+          "4Runner": ["Suspension"],
+          "Hilux": ["Suspension"],
+          "Camry": ["Suspension"],
+          "Carina": ["Suspension"],
+          "Picnic": ["Suspension"],
+          "Previa": ["Suspension"],
+          "Mirai": ["Suspension"],
+          "Passo": ["Suspension"]
+      },
+      "Volkwagen": {
+          "Polo-6R": ["Exhaust-Systems", "Suspension"],
+          "Golf-MK7": ["Exhaust-Systems", "Suspension"],
+          "Polo-AW": ["Exhaust-Systems", "Suspension"],
+          "Arteon-3H": ["Exhaust-Systems", "Suspension"],
+          "T-Roc-A1": ["Exhaust-Systems", "Suspension"],
+          "Eos-1F": ["Exhaust-Systems", "Suspension"],
+          "Golf-MK5": ["Exhaust-Systems", "Suspension"],
+          "Golf-MK6": ["Exhaust-Systems", "Suspension"],
+          "Jetta-MK5": ["Exhaust-Systems", "Suspension"],
+          "Jetta-MK6": ["Exhaust-Systems"],
+          "Passat-B6-B7-+-CC": ["Exhaust-Systems", "Suspension"],
+          "Scirocco-MK3": ["Exhaust-Systems", "Suspension"],
+          "Passat-B8": ["Exhaust-Systems", "Suspension"],
+          "Golf-MK8": ["Exhaust-Systems", "Suspension"],
+          "Beetle-16": ["Suspension"],
+          "Beetle-1C-1Y-9C": ["Suspension"],
+          "Bora-1J-Jetta-MK4": ["Suspension"],
+          "Bus-T3": ["Suspension"],
+          "Bus-T4": ["Suspension"],
+          "Bus-T5": ["Suspension"],
+          "Bus-T6": ["Suspension"],
+          "Caddy-SB": ["Suspension"],
+          "Corrado-53i": ["Suspension"],
+          "Fox-5Z": ["Suspension"],
+          "Golf-MK1": ["Suspension"],
+          "Golf-MK2": ["Suspension"],
+          "Golf-MK3": ["Suspension"],
+          "Golf-MK4": ["Suspension"],
+          "Jetta-MK1": ["Suspension"],
+          "Jetta-MK2": ["Suspension"],
+          "Lupo-6X-6ES": ["Suspension"],
+          "Passat-B5": ["Suspension"],
+          "Polo-6N-6N2-6KV": ["Suspension"],
+          "Polo-9N-9N3": ["Suspension"],
+          "Scirocco-MK1-MK2": ["Suspension"],
+          "Taigo-CS": ["Suspension"],
+          "T-Cross-C1": ["Suspension"],
+          "Tiguan-5N": ["Suspension"],
+          "Tiguan-AD1": ["Suspension"],
+          "Touran-1T": ["Suspension"],
+          "Touran-5T": ["Suspension"],
+          "Up-AA": ["Suspension"],
+          "Vento-1HX0-Jetta-MK3": ["Suspension"]
+      },
+      "Porsche": {
+          "911-66-80": ["Exhaust-Systems", "Suspension"],
+          "911-992": ["Exhaust-Systems", "Suspension"],
+          "911-991": ["Exhaust-Systems", "Suspension"],
+          "911-996": ["Exhaust-Systems", "Suspension"],
+          "911-997": ["Exhaust-Systems", "Suspension"],
+          "Boxster-987": ["Exhaust-Systems", "Suspension"],
+          "Boxster-718-982": ["Exhaust-Systems", "Suspension"],
+          "Cayenne-958": ["Exhaust-Systems", "Suspension"],
+          "Cayman-987": ["Exhaust-Systems", "Suspension"],
+          "Cayman-718-982": ["Exhaust-Systems", "Suspension"],
+          "Macan-95B": ["Exhaust-Systems", "Suspension"],
+          "Cayman-981": ["Exhaust-Systems", "Suspension"],
+          "Cayenne-9YA": ["Exhaust-Systems", "Suspension"],
+          "Panamera-971": ["Exhaust-Systems", "Suspension"],
+          "Panamera-970": ["Exhaust-Systems", "Suspension"],
+          "Boxster-981": ["Exhaust-Systems", "Suspension"],
+          "911-964": ["Suspension"],
+          "911-993": ["Suspension"],
+          "924": ["Suspension"],
+          "944": ["Suspension"],
+          "968": ["Suspension"],
+          "Cayenne-955-957": ["Suspension"],
+          "Boxster-986": ["Suspension"],
+          "Taycan-Y1A": ["Suspension"],
+          "928": ["Suspension"],
+          "959": ["Suspension"],
+          "911-965-Turbo": ["Suspension"]
+      },
+      "AlfaRomeo": {
+          "Giulia-952": ["Exhaust-Systems", "Suspension"],
+          "Stelvio-949": ["Exhaust-Systems", "Suspension"],
+          "145-146-930": ["Suspension"],
+          "GTV-Spider-Coupe-916": ["Suspension"],
+          "Giulietta-940": ["Suspension"],
+          "159-939": ["Suspension"],
+          "147-937": ["Suspension"],
+          "156-932": ["Suspension"],
+          "GT-Coupe-937": ["Suspension"],
+          "Brera-939": ["Suspension"],
+          "Spider-939": ["Suspension"],
+          "MiTo-955": ["Suspension"],
+          "75-162": ["Suspension"],
+          "155-167": ["Suspension"],
+          "166": ["Suspension"],
+          "4C-+-4C-Spider-960-961": ["Suspension"],
+          "164": ["Suspension"],
+          "8C-920": ["Suspension"],
+          "33-907": ["Suspension"]
+      },
+      "Bentley": {
+          "Bentayga": ["Exhaust-Systems", "Suspension"],
+          "Continental-Flying-Spur-3W": ["Suspension"],
+          "Continental-GT-3W": ["Suspension"],
+          "Flying-Spur-3S": ["Suspension"]
+      },
+      "Dodge": {
+          "Challenger": ["Exhaust-Systems", "Suspension"],
+          "RAM": ["Exhaust-Systems", "Suspension"],
+          "Caliber": ["Suspension"],
+          "Nitro": ["Suspension"],
+          "Magnum": ["Suspension"],
+          "Dakota": ["Suspension"],
+          "Durango": ["Suspension"],
+          "Journey": ["Suspension"],
+          "Viper": ["Suspension"],
+          "Avenger": ["Suspension"],
+          "Charger": ["Suspension"],
+          "Neon": ["Suspension"]
+      },
+      "Honda": {
+          "e": ["Exhaust-Systems", "Suspension"],
+          "Civic-MK10": ["Exhaust-Systems", "Suspension"],
+          "Civic-MK8": ["Exhaust-Systems", "Suspension"],
+          "Civic-MK7": ["Exhaust-Systems", "Suspension"],
+          "Civic-MK9": ["Exhaust-Systems", "Suspension"],
+          "CR-Z": ["Exhaust-Systems", "Suspension"],
+          "Civic-MK4": ["Suspension"],
+          "Civic-MK5": ["Suspension"],
+          "CRX-MK2": ["Suspension"],
+          "CRX-MK3": ["Suspension"],
+          "Civic-MK6": ["Suspension"],
+          "CRX-MK1": ["Suspension"],
+          "Prelude": ["Suspension"],
+          "Accord-MK7": ["Suspension"],
+          "Accord-MK8": ["Suspension"],
+          "S2000": ["Suspension"],
+          "CR-V": ["Suspension"],
+          "Jazz": ["Suspension"],
+          "Stream": ["Suspension"],
+          "HR-V": ["Suspension"],
+          "Accord-MK6": ["Suspension"],
+          "Integra": ["Suspension"],
+          "Accord-MK3": ["Suspension"],
+          "Accord-MK5": ["Suspension"],
+          "Civic-MK3": ["Suspension"],
+          "Concerto": ["Suspension"],
+          "FR-V": ["Suspension"],
+          "Legend": ["Suspension"],
+          "Logo": ["Suspension"],
+          "NSX": ["Suspension"],
+          "Shuttle": ["Suspension"],
+          "Accord-MK10": ["Suspension"],
+          "Accord-MK4": ["Suspension"],
+          "Brio": ["Suspension"],
+          "City": ["Suspension"],
+          "Civic-MK11": ["Suspension"]
+      },
+      "Jeep": {
+          "Gladiator": ["Exhaust-Systems", "Suspension"],
+          "Renegade": ["Suspension"],
+          "Cherokee": ["Suspension"],
+          "Commander": ["Suspension"],
+          "Grand-Cherokee": ["Suspension"],
+          "Compass": ["Suspension"],
+          "Patriot": ["Suspension"],
+          "Wrangler": ["Suspension"]
+      },
+      "Jaguar": {
+          "I-PACE-X590": ["Exhaust-Systems", "Suspension"],
+          "X-Type-CF1": ["Suspension"],
+          "F-Pace-X761": ["Suspension"],
+          "XE-X760": ["Suspension"],
+          "XF-X250": ["Suspension"],
+          "E-Pace-X540": ["Suspension"],
+          "F-Type-S-QQ6": ["Suspension"],
+          "S-Type-CCX": ["Suspension"],
+          "XF-X260": ["Suspension"],
+          "XJ8-XJR-X308": ["Suspension"],
+          "XK-X150": ["Suspension"],
+          "XK8-XKR-X100": ["Suspension"],
+          "XJ-XJR-XJ-X300": ["Suspension"]
+      },
+      "Kia": {
+          "Stinger": ["Exhaust-Systems", "Suspension"],
+          "Sportage-MK4": ["Exhaust-Systems", "Suspension"],
+          "Sportage-MK3": ["Exhaust-Systems", "Suspension"],
+          "Cee'd-+-Pro-Cee'd-MK1-ED": ["Suspension"],
+          "Cee'd-+-Pro-Cee'd-MK2-JD": ["Suspension"],
+          "Optima-MK5": ["Suspension"],
+          "Cee'd-+-Pro-Cee'd-MK3-CD": ["Suspension"],
+          "Sorento-MK1": ["Suspension"],
+          "Sorento-MK2": ["Suspension"],
+          "Sorento-MK3": ["Suspension"],
+          "Sorento-MK4": ["Suspension"],
+          "Rio-MK3": ["Suspension"],
+          "Picanto": ["Suspension"],
+          "Venga": ["Suspension"],
+          "Rio-MK4": ["Suspension"],
+          "Stonic": ["Suspension"],
+          "Cadenza": ["Suspension"],
+          "Soul": ["Suspension"],
+          "EV6": ["Suspension"],
+          "Sportage-MK5": ["Suspension"],
+          "Optima-MK4": ["Suspension"],
+          "Optima-MK3": ["Suspension"],
+          "Carnival-Sedona": ["Suspension"],
+          "Carens": ["Suspension"],
+          "Sportage-MK2": ["Suspension"],
+          "Rio-MK2": ["Suspension"],
+          "Cerato": ["Suspension"],
+          "Niro": ["Suspension"],
+          "Sportage-MK1": ["Suspension"],
+          "Clarus": ["Suspension"],
+          "Pride": ["Suspension"],
+          "Rocsta": ["Suspension"],
+          "Sephia": ["Suspension"],
+          "Shuma": ["Suspension"],
+          "Joice-Carstar": ["Suspension"],
+          "Magentis": ["Suspension"],
+          "Oprius": ["Suspension"],
+          "Rio-MK1": ["Suspension"]
+      },
+      "Lamborghini": {
+          "Urus": ["Exhaust-Systems"],
+          "Gallardo": ["Exhaust-Systems", "Suspension"],
+          "Huracan": ["Exhaust-Systems", "Suspension"],
+          "Aventador": ["Exhaust-Systems"]
+      },
+      "LandRover": {
+          "Discovery-MK5": ["Suspension"],
+          "Range-Rover-Sport-MK2": ["Suspension", "Exhaust-Systems"],
+          "Velar": ["Suspension"],
+          "Range-Rover-MK4": ["Suspension"],
+          "Defender": ["Exhaust-Systems", "Suspension"],
+          "Evoque-MK1": ["Suspension"],
+          "Discovery-Sport": ["Suspension"],
+          "Evoque-MK2": ["Suspension"],
+          "Freelander": ["Suspension"],
+          "Discovery-MK3-MK4": ["Suspension"],
+          "Range-Rover-MK3": ["Suspension"],
+          "Range-Rover-Sport-MK1": ["Suspension"],
+          "Range-Rover-MK2": ["Suspension"]
+      },
+      "McLaren": {
+          "720S": ["Exhaust-Systems"],
+          "540C": ["Exhaust-Systems"],
+          "570S": ["Exhaust-Systems"],
+          "650S": ["Exhaust-Systems"],
+          "12C": ["Exhaust-Systems"]
+      },
+      "Mitsubishi": {
+          "Lancer": ["Exhaust-Systems", "Suspension"],
+          "ASX-GA0": ["Suspension"],
+          "Galant": ["Suspension"],
+          "Eclipse": ["Suspension"],
+          "Space-Star": ["Suspension"],
+          "Colt": ["Suspension"],
+          "Carisma-DA0": ["Suspension"],
+          "Outlander": ["Suspension"],
+          "Pajero": ["Suspension"],
+          "L200": ["Suspension"],
+          "3000-GT": ["Suspension"],
+          "Grandis": ["Suspension"],
+          "Saporo": ["Suspension"],
+          "Sigma": ["Suspension"],
+          "Space-Gear": ["Suspension"],
+          "Space-Runner": ["Suspension"],
+          "Space-Wagon": ["Suspension"],
+          "i-Miev": ["Suspension"],
+          "Mirage": ["Suspension"]
+      },
+      "Nissan": {
+          "350Z": ["Exhaust-Systems", "Suspension"],
+          "GT-R": ["Exhaust-Systems", "Suspension"],
+          "370Z": ["Exhaust-Systems", "Suspension"],
+          "Micra": ["Suspension"],
+          "Figaro": ["Suspension"],
+          "Sunny": ["Suspension"],
+          "100NX": ["Suspension"],
+          "Qashqai": ["Suspension"],
+          "X-Trail": ["Suspension"],
+          "Juke": ["Suspension"],
+          "Note": ["Suspension"],
+          "Primera": ["Suspension"],
+          "Cube": ["Suspension"],
+          "Tiida": ["Suspension"],
+          "Pulsar": ["Suspension"],
+          "Leaf": ["Suspension"],
+          "Almera": ["Suspension"],
+          "Townstar": ["Suspension"],
+          "Murano": ["Suspension"],
+          "Navara": ["Suspension"],
+          "Pathfinder": ["Suspension"],
+          "Patrol": ["Suspension"],
+          "Pick-Up": ["Suspension"],
+          "200SX": ["Suspension"],
+          "300ZX": ["Suspension"],
+          "Bluebird": ["Suspension"],
+          "Maxima": ["Suspension"],
+          "Terrano": ["Suspension"],
+          "Cherry-Sunny": ["Suspension"],
+          "Kubistar": ["Suspension"],
+          "Pixo": ["Suspension"],
+          "Primastar": ["Suspension"],
+          "Sylphy": ["Suspension"],
+          "NV300": ["Suspension"]
+      },
+      "Renault": {
+          "Clio-C": ["Exhaust-Systems", "Suspension"],
+          "Megane-II": ["Exhaust-Systems", "Suspension"],
+          "Clio-B": ["Exhaust-Systems", "Suspension"],
+          "Megane-IV": ["Exhaust-Systems", "Suspension"],
+          "Megane-III": ["Exhaust-Systems", "Suspension"],
+          "R19": ["Suspension"],
+          "Clio-A": ["Suspension"],
+          "Clio-D": ["Suspension"],
+          "Megane-I": ["Suspension"],
+          "R5": ["Suspension"],
+          "Twingo": ["Suspension"],
+          "Kadjar": ["Suspension"],
+          "Fluence": ["Suspension"],
+          "Scenic": ["Suspension"],
+          "Wind": ["Suspension"],
+          "Laguna": ["Suspension"],
+          "Captur": ["Suspension"],
+          "Arkana": ["Suspension"],
+          "Zoe": ["Suspension"],
+          "Talisman": ["Suspension"],
+          "Espace": ["Suspension"],
+          "Koleos": ["Suspension"],
+          "Alaskan": ["Suspension"],
+          "Clio-E": ["Suspension"],
+          "Kangoo": ["Suspension"],
+          "Latitude": ["Suspension"],
+          "Modus": ["Suspension"],
+          "R21": ["Suspension"],
+          "R9": ["Suspension"],
+          "Safrane": ["Suspension"],
+          "Trafic": ["Suspension"]
+      },
+      "Scion": {
+          "FR-S": ["Exhaust-Systems"]
+      },
+      "Subaru": {
+          "Impreza": ["Exhaust-Systems", "Suspension"],
+          "BRZ": ["Exhaust-Systems", "Suspension"],
+          "Forester": ["Suspension"],
+          "Trezia": ["Suspension"],
+          "XV": ["Suspension"],
+          "Levorg": ["Suspension"],
+          "Justy": ["Suspension"],
+          "Legacy": ["Suspension"],
+          "Dex": ["Suspension"]
+      },
+      "Suzuki": {
+          "Swift": ["Exhaust-Systems", "Suspension"],
+          "Ignis": ["Suspension"],
+          "Vitara": ["Suspension"],
+          "Jimny": ["Suspension"],
+          "SX4": ["Suspension"],
+          "Ertiga": ["Suspension"],
+          "Swace": ["Suspension"],
+          "Splash": ["Suspension"],
+          "Grand-Vitara": ["Suspension"],
+          "Kizashi": ["Suspension"],
+          "Baleno": ["Suspension"],
+          "LJ-SJ": ["Suspension"],
+          "Samurai": ["Suspension"],
+          "SX4-S-Cross": ["Suspension"],
+          "Alto": ["Suspension"],
+          "Liana-Baleno": ["Suspension"],
+          "Wagon-R": ["Suspension"]
+      },
+      "Tesla": {
+          "Model-3": ["Exhaust-Systems", "Suspension"],
+          "Model-S": ["Exhaust-Systems", "Suspension"],
+          "Model-X": ["Exhaust-Systems"],
+          "Model-Y": ["Exhaust-Systems", "Suspension"]
+      },
+      "Volkswagen": {
+          "Amarok-2H": ["Exhaust-Systems", "Suspension"],
+          "Arteon-3H": ["Exhaust-Systems", "Suspension"],
+          "Beetle-16": ["Exhaust-Systems", "Suspension"],
+          "Bora-1J-Jetta-MK4": ["Exhaust-Systems", "Suspension"],
+          "Bus-T5": ["Exhaust-Systems", "Suspension"],
+          "Bus-T6": ["Exhaust-Systems", "Suspension"],
+          "Caddy-2K": ["Exhaust-Systems", "Suspension"],
+          "Corrado-53i": ["Exhaust-Systems", "Suspension"],
+          "Golf-MK1": ["Exhaust-Systems", "Suspension"],
+          "Golf-MK2": ["Exhaust-Systems", "Suspension"],
+          "Golf-MK4": ["Exhaust-Systems", "Suspension"],
+          "Golf-MK5": ["Exhaust-Systems", "Suspension"],
+          "Golf-MK6": ["Exhaust-Systems", "Suspension"],
+          "Golf-MK7": ["Exhaust-Systems", "Suspension"],
+          "Golf-MK8": ["Exhaust-Systems", "Suspension"],
+          "Jetta-MK5": ["Exhaust-Systems", "Suspension"],
+          "Jetta-MK6": ["Exhaust-Systems", "Suspension"],
+          "Jetta-MK7": ["Exhaust-Systems"],
+          "Polo-6R": ["Exhaust-Systems", "Suspension"],
+          "Polo-9N-9N3": ["Exhaust-Systems", "Suspension"],
+          "Polo-AW": ["Exhaust-Systems", "Suspension"],
+          "Scirocco-MK3": ["Exhaust-Systems", "Suspension"],
+          "Tiguan-AD1": ["Exhaust-Systems", "Suspension"],
+          "T-Roc-A1": ["Exhaust-Systems", "Suspension"],
+          "Up-AA": ["Exhaust-Systems", "Suspension"],
+          "Golf-MK3": ["Suspension"],
+          "Lupo-6X-6ES": ["Suspension"],
+          "Polo-6N-6N2-6KV": ["Suspension"],
+          "Scirocco-MK1-MK2": ["Suspension"],
+          "Vento-1HX0-Jetta-MK3": ["Suspension"],
+          "K\u00c3\u00a4fer": ["Suspension"],
+          "Beetle-1C-1Y-9C": ["Suspension"],
+          "Passat-B5": ["Suspension"],
+          "Eos-1F": ["Suspension"],
+          "Passat-B6-B7-+-CC": ["Suspension"],
+          "Touran-1T": ["Suspension"],
+          "Passat-B4": ["Suspension"],
+          "Polo-86C": ["Suspension"],
+          "Passat-B8": ["Suspension"],
+          "Touran-5T": ["Suspension"],
+          "Jetta-MK2": ["Suspension"],
+          "Tiguan-5N": ["Suspension"],
+          "T-Cross-C1": ["Suspension"],
+          "Caddy-SB": ["Suspension"],
+          "ID.3": ["Suspension"],
+          "Sharan-7N": ["Suspension"],
+          "Jetta-MK1": ["Suspension"],
+          "Fox-5Z": ["Suspension"],
+          "Gol": ["Suspension"],
+          "Taigo-CS": ["Suspension"],
+          "Bus-T4": ["Suspension"],
+          "Bus-T7": ["Suspension"],
+          "Touareg-7L": ["Suspension"],
+          "ID.4": ["Suspension"],
+          "Sharan-7M": ["Suspension"],
+          "ID.5": ["Suspension"],
+          "Phaeton": ["Suspension"],
+          "Touareg-CR": ["Suspension"],
+          "Touareg-7P": ["Suspension"],
+          "Bus-T3": ["Suspension"],
+          "Passat-B2": ["Suspension"],
+          "Taro": ["Suspension"],
+          "Passat-B3": ["Suspension"]
+      },
+      "Abarth": {
+          "595-500": ["Exhaust-Systems", "Suspension"],
+          "500-312": ["Exhaust-Systems"],
+          "124-Spider": ["Suspension"],
+          "Grande-Punto-199": ["Suspension"]
+      },
+      "Fiat": {
+          "124-Spider": ["Exhaust-Systems", "Suspension"],
+          "500-312": ["Exhaust-Systems", "Suspension"],
+          "Cinquecento-Seicento": ["Suspension"],
+          "Punto-176": ["Suspension"],
+          "Punto-188": ["Suspension"],
+          "Brava-Bravo": ["Suspension"],
+          "Tipo-Tempra": ["Suspension"],
+          "Barchetta": ["Suspension"],
+          "Uno-146A": ["Suspension"],
+          "Grande-Punto-199": ["Suspension"],
+          "Stilo-192": ["Suspension"],
+          "Panda": ["Suspension"],
+          "Linea": ["Suspension"],
+          "Idea": ["Suspension"],
+          "Sedici": ["Suspension"],
+          "Coupe": ["Suspension"],
+          "Croma": ["Suspension"],
+          "Ulysse-Scudo": ["Suspension"],
+          "500-332": ["Suspension"],
+          "Fullback": ["Suspension"],
+          "Talento": ["Suspension"],
+          "Freemont": ["Suspension"],
+          "Multipla": ["Suspension"],
+          "Palio": ["Suspension"]
+      },
+      "Maserati": {
+          "Ghibli": ["Exhaust-Systems", "Suspension"],
+          "MC20": ["Suspension"],
+          "3200GT": ["Suspension"],
+          "Coupe-GT-GTS-GranTurismo": ["Suspension"],
+          "Levante": ["Suspension"],
+          "Quattroporte": ["Suspension"],
+          "4200-Gran-Sport": ["Suspension"],
+          "Grand-Convertible": ["Suspension"]
+      },
+      "Mazda": {
+          "CX3-DJ1": ["Exhaust-Systems", "Suspension"],
+          "MX5-NC": ["Exhaust-Systems", "Suspension"],
+          "MX5-ND": ["Exhaust-Systems", "Suspension"],
+          "CX30-DM": ["Suspension"],
+          "323-BF": ["Suspension"],
+          "MX5-NA": ["Suspension"],
+          "2-DJ": ["Suspension"],
+          "3-BK": ["Suspension"],
+          "3-BM": ["Suspension"],
+          "6-GG-GY-GG1": ["Suspension"],
+          "6-GH": ["Suspension"],
+          "6-GJ-GL": ["Suspension"],
+          "CX5-KE": ["Suspension"],
+          "CX5-KF": ["Suspension"],
+          "MX5-NB": ["Suspension"],
+          "323-BG": ["Suspension"],
+          "2-DE": ["Suspension"],
+          "2-DY": ["Suspension"],
+          "3-BL": ["Suspension"],
+          "323-BA": ["Suspension"],
+          "2-ZV": ["Suspension"],
+          "5-CR": ["Suspension"],
+          "5-CW": ["Suspension"],
+          "3-BP": ["Suspension"],
+          "RX8": ["Suspension"],
+          "323-BJ": ["Suspension"],
+          "Tribute": ["Suspension"],
+          "B-Series": ["Suspension"],
+          "121-DB": ["Suspension"],
+          "121-JASM-JBSM": ["Suspension"],
+          "626-GD-GV": ["Suspension"],
+          "626-GE-GF-GW": ["Suspension"],
+          "929": ["Suspension"],
+          "BT-50-B2500": ["Suspension"],
+          "CX7-ER": ["Suspension"],
+          "Demio-DW": ["Suspension"],
+          "MPV": ["Suspension"],
+          "MX3-EC": ["Suspension"],
+          "MX30-DR": ["Suspension"],
+          "MX6-GE": ["Suspension"],
+          "Premacy": ["Suspension"],
+          "RX7": ["Suspension"],
+          "Xedos-6": ["Suspension"],
+          "Xedos-9": ["Suspension"],
+          "626-GC": ["Suspension"],
+          "CX60": ["Suspension"],
+          "RX8-SE": ["Suspension"]
+      },
+      "MINI": {
+          "F54-F55-F56-F57-F60-14-": ["Exhaust-Systems"],
+          "R50-R52-R53-01-06": ["Exhaust-Systems"],
+          "R55-R56-R57-R58-R59-R60-R61-06-16": ["Exhaust-Systems"]
+      },
+      "Chevrolet": {
+          "Corvette-C8": ["Exhaust-Systems", "Suspension"],
+          "Corvette-C7": ["Exhaust-Systems"],
+          "Corvette-C6": ["Exhaust-Systems", "Suspension"],
+          "Aveo": ["Suspension"],
+          "Cruze": ["Suspension"],
+          "Camaro-MK6": ["Suspension"],
+          "Trax-Tracker": ["Suspension"],
+          "Nexia-Espero": ["Suspension"],
+          "Malibu": ["Suspension"],
+          "Camaro-MK5": ["Suspension"],
+          "Captiva": ["Suspension"],
+          "Blazer-": ["Suspension"],
+          "Corvette-C5": ["Suspension"],
+          "Lanos": ["Suspension"],
+          "Nubira": ["Suspension"],
+          "Orlando": ["Suspension"],
+          "TrailBlazer": ["Suspension"],
+          "Epica": ["Suspension"],
+          "Evanda-Leganza": ["Suspension"],
+          "Kalos-Lanos-Aveo": ["Suspension"],
+          "Lacetti": ["Suspension"],
+          "Matiz": ["Suspension"],
+          "Spark": ["Suspension"]
+      },
+      "Ferrari": {
+          "488-GTB": ["Exhaust-Systems", "Suspension"],
+          "599-GTB": ["Suspension"],
+          "308-GTB-S-": ["Suspension"],
+          "328-GTB-S": ["Suspension"],
+          "348-TB-TS-GTB-GTS-": ["Suspension"],
+          "456GT": ["Suspension"],
+          "458-Italia": ["Suspension"],
+          "812": ["Suspension"],
+          "California": ["Suspension"],
+          "F355": ["Suspension"],
+          "F360-Modena": ["Suspension"],
+          "F430": ["Suspension"],
+          "F512": ["Suspension"],
+          "F550-Maranello": ["Suspension"],
+          "F575-M-Maranello": ["Suspension"],
+          "F8": ["Suspension"],
+          "Mondial": ["Suspension"],
+          "Roma": ["Suspension"],
+          "Testarossa": ["Suspension"]
+      },
+      "Chrysler": {
+          "300C": ["Suspension"],
+          "Crossfire": ["Suspension"],
+          "PT-Cruiser": ["Suspension"],
+          "Neon": ["Suspension"],
+          "Sebring-Stratus": ["Suspension"],
+          "Aspen": ["Suspension"],
+          "300M": ["Suspension"],
+          "Vision": ["Suspension"],
+          "Voyager": ["Suspension"]
+      },
+      "Dacia": {
+          "Logan": ["Suspension"],
+          "Duster": ["Suspension"],
+          "Sandero": ["Suspension"],
+          "Dokker": ["Suspension"],
+          "Lodgy": ["Suspension"],
+          "Jogger": ["Suspension"],
+          "Spring": ["Suspension"]
+      },
+      "Daihatsu": {
+          "Copen": ["Suspension"],
+          "Materia": ["Suspension"],
+          "Charade": ["Suspension"],
+          "Sirion": ["Suspension"],
+          "Trevis": ["Suspension"],
+          "Applause": ["Suspension"],
+          "Feroza": ["Suspension"],
+          "Grand-Move": ["Suspension"],
+          "Rocky": ["Suspension"],
+          "Terios": ["Suspension"]
+      },
+      "Lancia": {
+          "Delta": ["Suspension"],
+          "Y": ["Suspension"],
+          "Phedra": ["Suspension"],
+          "Prisma": ["Suspension"],
+          "Zeta": ["Suspension"],
+          "Dedra": ["Suspension"],
+          "Kappa": ["Suspension"],
+          "Lybra": ["Suspension"],
+          "Musa": ["Suspension"],
+          "Thema": ["Suspension"],
+          "Flavia": ["Suspension"]
+      },
+      "Rover": {
+          "25": ["Suspension"],
+          "45": ["Suspension"],
+          "200-400": ["Suspension"],
+          "600": ["Suspension"],
+          "800": ["Suspension"],
+          "75": ["Suspension"]
+      },
+      "Saab": {
+          "9000": ["Suspension"],
+          "900": ["Suspension"],
+          "09.05.23": ["Suspension"],
+          "09.03.23": ["Suspension"],
+          "Alhambra-7N": ["Suspension"]
+      },
+      "Volvo": {
+          "S80-T": ["Suspension"],
+          "V70-S": ["Suspension"],
+          "850": ["Suspension"],
+          "S40-V40-V": ["Suspension"],
+          "S70-V70-L": ["Suspension"],
+          "V40-M": ["Suspension"],
+          "S40-V50-M": ["Suspension"],
+          "S60-V60-Z": ["Suspension"],
+          "XC60-U": ["Suspension"],
+          "XC90-L": ["Suspension"],
+          "C30-M": ["Suspension"],
+          "S90-V90-P": ["Suspension"],
+          "S60-V60-F": ["Suspension"],
+          "XC40-X": ["Suspension"],
+          "C70-M": ["Suspension"],
+          "XC60-D": ["Suspension"],
+          "S60-R": ["Suspension"],
+          "S80-A": ["Suspension"],
+          "V70-B": ["Suspension"],
+          "XC70-B": ["Suspension"],
+          "C40-X": ["Suspension"],
+          "C70-N": ["Suspension"],
+          "S90-V90-964": ["Suspension"],
+          "XC70-S": ["Suspension"],
+          "XC90-C": ["Suspension"],
+          "340-360": ["Suspension"],
+          "440-480": ["Suspension"],
+          "S40-M": ["Suspension"],
+          "V90-P": ["Suspension"]
+      },
+      "Alpine": {
+          "A110-AEF": ["Suspension"]
+      },
+      "DS": {
+          "DS3": ["Suspension"],
+          "DS4": ["Suspension"],
+          "DS7-Crossback": ["Suspension"]
+      },
+      "Infiniti": {
+          "EX": ["Suspension"],
+          "FX": ["Suspension"],
+          "G": ["Suspension"],
+          "M": ["Suspension"],
+          "Q": ["Suspension"]
+      },
+      "Lada": {
+          "110-111-112": ["Suspension"],
+          "Samara": ["Suspension"],
+          "Vesta": ["Suspension"]
+      },
+      "Lexus": {
+          "IS": ["Suspension"],
+          "CT": ["Suspension"],
+          "RX": ["Suspension"],
+          "GS": ["Suspension"],
+          "SC": ["Suspension"],
+          "UX": ["Suspension"]
+      },
+      "Lotus": {
+          "Elise-Exige-S2": ["Suspension"],
+          "Europa": ["Suspension"],
+          "Elise-S1": ["Suspension"],
+          "Esprit": ["Suspension"],
+          "Evora": ["Suspension"]
+      },
+      "Polestar": {
+          "Polestar-2": ["Suspension"]
+      },
+      "Proton": {
+          "Iriz": ["Suspension"],
+          "300-400": ["Suspension"],
+          "Persona": ["Suspension"]
+      },
+      "Smart": {
+          "Fortwo-450": ["Suspension"],
+          "Fortwo-451": ["Suspension"],
+          "Fortwo-453": ["Suspension"],
+          "Roadster-Coupe-452": ["Suspension"],
+          "Forfour-453": ["Suspension"],
+          "Forfour-454": ["Suspension"]
+      },
+      "SsangYong": {
+          "Korando": ["Suspension"],
+          "Rexton": ["Suspension"],
+          "Musso": ["Suspension"]
+      },
+      "Cadillac": {
+          "ATS": ["Suspension"],
+          "BLS": ["Suspension"]
+      },
+      "AstonMartin": {
+          "DB11": ["Suspension"],
+          "DB9": ["Suspension"],
+          "Vanquish": ["Suspension"],
+          "Vantage": ["Suspension"],
+          "DBS": ["Suspension"]
+      },
+      "Hummer": {
+          "H2": ["Suspension"]
+      },
+      "Isuzu": {
+          "Amigo": ["Suspension"],
+          "Trooper": ["Suspension"]
+      },
+      "MG": {
+          "F-FT": ["Suspension"],
+          "F-TF": ["Suspension"]
+      },
+      "Acura": {
+          "RL": ["Suspension"]
+      },
+      "Holden": {
+          "Malibu": ["Suspension"],
+          "Astra-H": ["Suspension"],
+          "Captiva": ["Suspension"],
+          "Barina": ["Suspension"],
+          "Epica": ["Suspension"],
+          "Cruze": ["Suspension"],
+          "Trax-Tracker": ["Suspension"],
+          "Commodore": ["Suspension"]
+      }
+  }];
+  var mfgArr = [{
+          %
+          for link in shop.metafields.manufacturer.handle1 %
+      }
+      "{{link.value}}", {
+          % endfor %
+      } {
+          %
+          for link in shop.metafields.manufacturer.handle2 %
+      }
+      "{{link.value}}", {
+          % endfor %
+      } {
+          %
+          for link in shop.metafields.manufacturer.handle3 %
+      }
+      "{{link.value}}", {
+          % endfor %
+      }
+  ];
+  var arr, current_field, dropdown_val1, dropdown_val2, dropdown_val3, dropdown_val4, search_tag, tagstr, newtext;
+
+  console.log("menuArr ::" + JSON.stringify(menuArr));
+  console.log("mfgArr :: " + mfgArr);
+  disableSearch();
+  //Out side click
+  $(document).on("click", function(event) {
+      var $trigger = $(".dropdown");
+      if ($trigger !== event.target && !$trigger.has(event.target).length) {
           //console.log("trigger");
           $(".dropdown-content").hide();
-        }            
-    });
-      //Drop btn Click
-    $(document).on('click','.dropbtn',function() {
+      }
+  });
+  //Drop btn Click
+  $(document).on('click', '.dropbtn', function() {
       $(".dropdown").removeClass("active");
       $(this).parents(".dropdown").addClass("active");
       $(".dropdown").not(".active").find(".dropdown-content").hide();
-      $(this).parents(".dropdown").find(".dropdown-content").toggle();     
-    }); 
-    // dropdown1
-    $(document).on('click','#dropdown-field_1 a',function() {
-      
-      $(this).parents(".dropdown").find(".dropdown-content").toggle();      
-      dropdown_val1 = $(this).attr("data-value");  
+      $(this).parents(".dropdown").find(".dropdown-content").toggle();
+  });
+  // dropdown1
+  $(document).on('click', '#dropdown-field_1 a', function() {
+
+      $(this).parents(".dropdown").find(".dropdown-content").toggle();
+      dropdown_val1 = $(this).attr("data-value");
       newtext = dropdown_val1.toString().replace(/-/g, " ");
       var flag = 0;
-	  $(this).parents(".dropdown").find(".dropbtn").text(newtext);
+      $(this).parents(".dropdown").find(".dropbtn").text(newtext);
       tagstr = dropdown_val1;
-      $("#dropdown-field_2 a").remove(); 
-      $("#dropdown-field_3 a").remove(); 
+      $("#dropdown-field_2 a").remove();
+      $("#dropdown-field_3 a").remove();
       $("#dropdown-field_4 a").remove();
-      $("#dropbtn2").text('Model').prop('disabled',true);
-      $("#dropbtn3").text('Parts').prop('disabled',true);
-      $("#dropbtn4").text('Manufacturer').prop('disabled',true);
+      $("#dropbtn2").text('Model').prop('disabled', true);
+      $("#dropbtn3").text('Parts').prop('disabled', true);
+      $("#dropbtn4").text('Manufacturer').prop('disabled', true);
       enableSearch();
-      $.each(menuArr,function(key,val){ 
-       // console.log("val ::"+JSON.stringify(val));
-        //console.log("dropdown_val :: "+dropdown_val1);
-        $.each(val,function(key1,val1){
-          if(key1 == dropdown_val1)  
-          { 
-           // console.log("val1 ::"+JSON.stringify(val1));
-            if(jQuery.type(val1) === 'object'){ 
-              flag = 1;
-              $.each(val1,function(key2,val2){                  
-                $("#dropdown-field_2 .dropdown-content-list").append("<a href='#' data-value='"+key2+"'>"+key2.replace("-", " ")+"</a>");
-              });
-            }
-            /*else{              
-              $("#dropdown-field_2 .dropdown-content-list").append("<a href='#' data-value='"+key1+"'>"+val1.replace("-", " ")+"</a>");
-            }*/
-          }
-        });
+      $.each(menuArr, function(key, val) {
+          // console.log("val ::"+JSON.stringify(val));
+          //console.log("dropdown_val :: "+dropdown_val1);
+          $.each(val, function(key1, val1) {
+              if (key1 == dropdown_val1) {
+                  // console.log("val1 ::"+JSON.stringify(val1));
+                  if (jQuery.type(val1) === 'object') {
+                      flag = 1;
+                      $.each(val1, function(key2, val2) {
+                          $("#dropdown-field_2 .dropdown-content-list").append("<a href='#' data-value='" + key2 + "'>" + key2.replace("-", " ") + "</a>");
+                      });
+                  }
+                  /*else{              
+                    $("#dropdown-field_2 .dropdown-content-list").append("<a href='#' data-value='"+key1+"'>"+val1.replace("-", " ")+"</a>");
+                  }*/
+              }
+          });
       });
-      if(flag == 1) {
-      $("#dropbtn2").prop('disabled',false); 
+      if (flag == 1) {
+          $("#dropbtn2").prop('disabled', false);
+      } else {
+          $("#dropbtn2").prop('disabled', true);
       }
-      else{
-        $("#dropbtn2").prop('disabled',true); 
-      }
-    });
-    //Dropdown 2
-    $(document).on('click','#dropdown-field_2 a',function() {      
+  });
+  //Dropdown 2
+  $(document).on('click', '#dropdown-field_2 a', function() {
       dropdown_val2 = $(this).attr("data-value");
       newtext = dropdown_val2.toString().replace(/-/g, " ");
       $(this).parents(".dropdown").find(".dropbtn").text(newtext);
-      tagstr = dropdown_val1+"_"+dropdown_val2;
-      $("#dropdown-field_3 a").remove();     
-      $("#dropdown-field_4 a").remove();     
-      $("#dropbtn3").text('Parts').prop('disabled',true);
-      $("#dropbtn4").text('Manufacturer').prop('disabled',true);  
+      tagstr = dropdown_val1 + "_" + dropdown_val2;
+      $("#dropdown-field_3 a").remove();
+      $("#dropdown-field_4 a").remove();
+      $("#dropbtn3").text('Parts').prop('disabled', true);
+      $("#dropbtn4").text('Manufacturer').prop('disabled', true);
       var flag = 0;
-      $.each(menuArr,function(key,val){ 
-       // console.log("val ::"+JSON.stringify(val));
-       // console.log("dropdown_val :: "+dropdown_val1);
-        $.each(val,function(key1,val1){
-          if(key1 == dropdown_val1)  
-          { 
-         //   console.log("val1 ::"+JSON.stringify(val1));
-            if(jQuery.type(val1) === 'object'){              
-              $.each(val1,function(key2,val2){                
-                if(key2 == dropdown_val2)  
-                {  
-               //   console.log("in if key2 :: val2");
-                  if(Array.isArray(val2)){
-                    flag = 1;
-                 //   console.log("yes object");
-                    $.each(val2,function(key3,val3){
-                    var newval = val3.toString().replace(/-/g, " ");
-                  //  console.log("newval :: "+newval);
-                    $("#dropdown-field_3 .dropdown-content-list").append("<a href='#' data-value='"+val3+"'>"+newval+"</a>");
-                    });
-                    }
-                  else{
-                    var newval1 = val2.toString().replace(/-/g, " ");
-                //    console.log("newval1 :: "+newval1);
-                    $("#dropdown-field_3 .dropdown-content-list").append("<a href='#' data-value='"+newval1+"'>"+newval1+"</a>");
-                    
+      $.each(menuArr, function(key, val) {
+          // console.log("val ::"+JSON.stringify(val));
+          // console.log("dropdown_val :: "+dropdown_val1);
+          $.each(val, function(key1, val1) {
+              if (key1 == dropdown_val1) {
+                  //   console.log("val1 ::"+JSON.stringify(val1));
+                  if (jQuery.type(val1) === 'object') {
+                      $.each(val1, function(key2, val2) {
+                          if (key2 == dropdown_val2) {
+                              //   console.log("in if key2 :: val2");
+                              if (Array.isArray(val2)) {
+                                  flag = 1;
+                                  //   console.log("yes object");
+                                  $.each(val2, function(key3, val3) {
+                                      var newval = val3.toString().replace(/-/g, " ");
+                                      //  console.log("newval :: "+newval);
+                                      $("#dropdown-field_3 .dropdown-content-list").append("<a href='#' data-value='" + val3 + "'>" + newval + "</a>");
+                                  });
+                              } else {
+                                  var newval1 = val2.toString().replace(/-/g, " ");
+                                  //    console.log("newval1 :: "+newval1);
+                                  $("#dropdown-field_3 .dropdown-content-list").append("<a href='#' data-value='" + newval1 + "'>" + newval1 + "</a>");
+
+                              }
+                              if (flag == 1) {
+                                  $("#dropbtn3").prop('disabled', false);
+                              } else {
+                                  //   console.log("parts else");
+                                  $("#dropbtn3").prop('disabled', true);
+                              }
+                          }
+                      });
                   }
-                  if(flag == 1)
-                  {
-                    $("#dropbtn3").prop('disabled',false);
-                  } 
-                  else{
-                 //   console.log("parts else");
-                    $("#dropbtn3").prop('disabled',true); 
-                  }
-                }
-              });
-            }           
-          }
-        });
-      });      
+              }
+          });
+      });
       $(this).parents(".dropdown").find(".dropdown-content").toggle();
-      
-    });  
-    //Dropdown 3
-    $(document).on('click','#dropdown-field_3 a',function() {
+
+  });
+  //Dropdown 3
+  $(document).on('click', '#dropdown-field_3 a', function() {
       dropdown_val3 = $(this).attr("data-value");
       newtext = dropdown_val3.toString().replace(/-/g, " ");
       $(this).parents(".dropdown").find(".dropbtn").text(newtext);
-      tagstr = dropdown_val1+"_"+dropdown_val2+"_"+dropdown_val3;
+      tagstr = dropdown_val1 + "_" + dropdown_val2 + "_" + dropdown_val3;
       // disableSearch();
-      $("#dropdown-field_4 a").remove().prop('disabled',true);    
+      $("#dropdown-field_4 a").remove().prop('disabled', true);
       $("#dropbtn4").text("Manufacturer");
-      var mfgstr = dropdown_val1+"_"+dropdown_val2+"_"+dropdown_val3;
-     // console.log("mfgstr :: "+mfgstr);
+      var mfgstr = dropdown_val1 + "_" + dropdown_val2 + "_" + dropdown_val3;
+      // console.log("mfgstr :: "+mfgstr);
       var flag = 0;
-      $.each(mfgArr,function(key,val){
-        //console.log("val :: "+val);
-       // console.log("mfgstr :: "+mfgstr);
-        if(val.indexOf(mfgstr) > -1)  
-        {   
-          flag = 1;
-          var mfgnewval = val.substring(val.lastIndexOf('_')).replace("_",'').replace("-"," ");
-         // console.log("mfgnewval :: "+mfgnewval);          
-          $("#dropdown-field_4 .dropdown-content-list").append("<a href='#' data-value='"+val.substring(val.lastIndexOf('_')).replace("_",'')+"'>"+val.substring(val.lastIndexOf('_')).replace("_",'').replace("-"," ")+"</a>");
-          
-        }
-        if(flag == 1)
-        {          
-        	$("#dropbtn4").prop('disabled',false);
-        } 
-        else{         
-           $("#dropbtn4").prop('disabled',true); 
-        }
-      });       
-       $(this).parents(".dropdown").find(".dropdown-content").toggle(); 
-      
-    }); 
-     //Dropdown 4    
-    $(document).on('click','#dropdown-field_4 a',function() {        
+      $.each(mfgArr, function(key, val) {
+          //console.log("val :: "+val);
+          // console.log("mfgstr :: "+mfgstr);
+          if (val.indexOf(mfgstr) > -1) {
+              flag = 1;
+              var mfgnewval = val.substring(val.lastIndexOf('_')).replace("_", '').replace("-", " ");
+              // console.log("mfgnewval :: "+mfgnewval);          
+              $("#dropdown-field_4 .dropdown-content-list").append("<a href='#' data-value='" + val.substring(val.lastIndexOf('_')).replace("_", '') + "'>" + val.substring(val.lastIndexOf('_')).replace("_", '').replace("-", " ") + "</a>");
+
+          }
+          if (flag == 1) {
+              $("#dropbtn4").prop('disabled', false);
+          } else {
+              $("#dropbtn4").prop('disabled', true);
+          }
+      });
+      $(this).parents(".dropdown").find(".dropdown-content").toggle();
+
+  });
+  //Dropdown 4    
+  $(document).on('click', '#dropdown-field_4 a', function() {
       dropdown_val4 = $(this).attr("data-value");
       newtext = dropdown_val4.toString().replace(/-/g, " ");
       $(this).parents(".dropdown").find(".dropbtn").text(newtext);
       enableSearch();
-      tagstr = dropdown_val1+"_"+dropdown_val2+"_"+dropdown_val3+"_"+dropdown_val4; 
+      tagstr = dropdown_val1 + "_" + dropdown_val2 + "_" + dropdown_val3 + "_" + dropdown_val4;
       $(this).parents(".dropdown").find(".dropdown-content").toggle();
-      
-    });
-    //Search Click
-    $(document).on('click','#sd_search',function() {
+
+  });
+  //Search Click
+  $(document).on('click', '#sd_search', function() {
       var pageurl = "https://orange-tuning.myshopify.com/search?q=tag:";
-      window.location.replace(pageurl+tagstr);
-    });
-    // Reset Click
-    $(document).on('click','#sd_reset',function() {
-      disableSearch();     
+      window.location.replace(pageurl + tagstr);
+  });
+  // Reset Click
+  $(document).on('click', '#sd_reset', function() {
+      disableSearch();
       $("#dropdown-field_2 a").remove();
       $("#dropdown-field_3 a").remove();
-      $("#dropdown-field_4 a").remove();     
-      $("#dropbtn2").prop('disabled',true);
-      $("#dropbtn3").prop('disabled',true);
-      $("#dropbtn4").prop('disabled',true);
+      $("#dropdown-field_4 a").remove();
+      $("#dropbtn2").prop('disabled', true);
+      $("#dropbtn3").prop('disabled', true);
+      $("#dropbtn4").prop('disabled', true);
       $("#dropbtn1").text('Maker');
       $("#dropbtn2").text('Model');
       $("#dropbtn3").text('Parts');
       $("#dropbtn4").text('Manufacturer');
-    });
-     
-    // input seach box
-    $("input.myInput").keyup(function(){
-      var filter, a, i;      
+  });
+
+  // input seach box
+  $("input.myInput").keyup(function() {
+      var filter, a, i;
       filter = $(this).val().toUpperCase();
       //console.log("filter :: "+filter);
       a = $(this).parents(".dropdown-content").find("a");
       for (i = 0; i < a.length; i++) {
-        var txtValue = a[i].textContent || a[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          a[i].style.display = "";
-        } else {
-          a[i].style.display = "none";
-        }
+          var txtValue = a[i].textContent || a[i].innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              a[i].style.display = "";
+          } else {
+              a[i].style.display = "none";
+          }
       }
-    });
-  
-  });  
-  
-  function disableSearch()
-  {
-    $("#sd_search").prop('disabled',true);
-  }
-  function enableSearch()
-  {
-    $("#sd_search").prop('disabled',false);
-  }
- 
-</script>
+  });
+
+});
+
+function disableSearch() {
+  $("#sd_search").prop('disabled', true);
+}
+
+function enableSearch() {
+  $("#sd_search").prop('disabled', false);
+}
+
+<
+/script>

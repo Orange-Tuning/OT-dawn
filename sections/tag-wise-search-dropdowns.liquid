@@ -103,6 +103,7 @@
       menuArr.forEach(function(item) {
           var brand = Object.keys(item)[0];
           var aElement = document.createElement('a');
+          console.log(brand);
           aElement.href = '#';
           aElement.setAttribute('data-value', brand);
           aElement.textContent = brand.charAt(0).toUpperCase() + brand.slice(1);  // Capitalizes the first letter

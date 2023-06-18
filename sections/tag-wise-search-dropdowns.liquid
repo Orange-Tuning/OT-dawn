@@ -89,12 +89,11 @@
 ]
 }
 {% endschema %}
-<script type="application/json"  src="{{ 'data.json' | asset_url }}" ></script>
 <script> 
  $(document).ready(function(){
 
-    var menuArr = [{ "audi":{ "tt-tts-ttrs-8s" :[ "exhaust-systems","suspension" ],"s1-8x" :[ "exhaust-systems","suspension" ],"s4-b9" :[ "exhaust-systems","suspension" ],"s5-5f" :[ "exhaust-systems","suspension" ],"a1-8x" :[ "exhaust-systems","suspension" ],"rs3-8v" :[ "exhaust-systems","suspension" ],"a3-8v" :[ "exhaust-systems","suspension" ],"q2-ga" :[ "exhaust-systems","suspension" ], },  }];
-    var mfgArr = JSON.parse(mfg);
+    var menuArr = [{ {% for link in linklists.maker.links %}{% if link.links != blank %}"{{ link.handle }}":{ {% for child_link in link.links %}{% if child_link.links != blank %}"{{ child_link.handle }}" :[ {% for grandchild_link in child_link.links %}"{{grandchild_link.handle}}"{% unless forloop.last %},{% endunless %}{% endfor %} ],{% else %}"{{ child_link.handle }}":"{{ child_link.handle }}",{% endif %}{% endfor %} }, {% else %}"{{ link.handle }}":"{{ link.handle }}",{% endif %}{% endfor %} }];
+    var mfgArr = [{% for link in linklists.manufacturer.links %}"{{link.handle}}",{% endfor %}];
     var arr, current_field, dropdown_val1, dropdown_val2, dropdown_val3, dropdown_val4,search_tag,tagstr,newtext;
     
     console.log("menuArr ::"+JSON.stringify(menuArr));  

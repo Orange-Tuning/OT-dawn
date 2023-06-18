@@ -131,12 +131,12 @@
       $("#dropbtn4").text('Manufacturer').prop('disabled',true);
       enableSearch();
       $.each(menuArr,function(key,val){ 
-       // console.log("val ::"+JSON.stringify(val));
-        //console.log("dropdown_val :: "+dropdown_val1);
+        console.log("val ::"+JSON.stringify(val));
+        console.log("dropdown_val :: "+dropdown_val1);
         $.each(val,function(key1,val1){
           if(key1 == dropdown_val1)  
           { 
-           // console.log("val1 ::"+JSON.stringify(val1));
+            console.log("val1 ::"+JSON.stringify(val1));
             if(jQuery.type(val1) === 'object'){ 
               flag = 1;
               $.each(val1,function(key2,val2){                  

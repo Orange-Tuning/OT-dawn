@@ -21,10 +21,7 @@
           <button id="dropbtn1" class="dropbtn sd-filter">Maker</button>
           <div id="dropdown-field_1" class="dropdown-content">
             <input type="text" placeholder="Search.." id="myInput1" class="myInput">
-            <div class="dropdown-content-list">
-            {% for link in linklists.maker.links %}
-            <a href="#" data-value="{{ link.handle }}">{{ link.title }}</a>
-            {% endfor %}
+            <div class="dropdown-content-list" id="brand-list">
             </div>
           </div>
         </div>       
@@ -99,6 +96,19 @@
     console.log("menuArr ::"+JSON.stringify(menuArr));  
     console.log("mfgArr :: "+mfgArr);     
     disableSearch();
+
+    // dropdown1 build
+    window.onload = function() {
+      var dropdownContent = document.getElementById('brand-list');
+      Object.keys(menuArr).forEach(function(brand) {
+          var aElement = document.createElement('a');
+          aElement.href = '#';
+          aElement.setAttribute('data-value', brand);
+          aElement.textContent = brand.charAt(0).toUpperCase() + brand.slice(1);  // Capitalizes the first letter
+          dropdownContent.appendChild(aElement);
+      });
+  };
+
     //Out side click
     $(document).on("click", function(event){
         var $trigger = $(".dropdown");
@@ -131,12 +141,12 @@
       $("#dropbtn4").text('Manufacturer').prop('disabled',true);
       enableSearch();
       $.each(menuArr,function(key,val){ 
-        console.log("val ::"+JSON.stringify(val));
-        console.log("dropdown_val :: "+dropdown_val1);
+       // console.log("val ::"+JSON.stringify(val));
+        //console.log("dropdown_val :: "+dropdown_val1);
         $.each(val,function(key1,val1){
           if(key1 == dropdown_val1)  
           { 
-            console.log("val1 ::"+JSON.stringify(val1));
+           // console.log("val1 ::"+JSON.stringify(val1));
             if(jQuery.type(val1) === 'object'){ 
               flag = 1;
               $.each(val1,function(key2,val2){                  

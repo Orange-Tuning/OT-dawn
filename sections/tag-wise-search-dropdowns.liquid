@@ -99,18 +99,19 @@
 
     // dropdown1 build
     window.onload = function() {
-      var dropdownContent = document.getElementById('brand-list');
-      console.log(dropdownContent);  // should not be null
-      console.log(menuArr);  // should not be null or undefined
-      Object.keys(menuArr).forEach(function(brand) {
-          console.log(brand);  // should print each brand
-          var aElement = document.createElement('a');
-          aElement.href = '#';
-          aElement.setAttribute('data-value', brand);
-          aElement.textContent = brand.charAt(0).toUpperCase() + brand.slice(1);
-          dropdownContent.appendChild(aElement);
+      var brandList = document.getElementById('brand-list'); 
+      var brandsObj = menuArr[0]; // Zugriff auf das erste (und einzige) Element des Arrays
+      var brands = Object.keys(brandsObj);
+  
+      brands.forEach(function(brand) {
+          var aTag = document.createElement('a');
+          aTag.setAttribute('href', '#');
+          aTag.setAttribute('data-value', brand);
+          aTag.textContent = brand;
+          brandList.appendChild(aTag);
       });
-  };
+  }
+  
   
   
 

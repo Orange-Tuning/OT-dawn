@@ -93,7 +93,7 @@
     var mfgArr = [{% for link in linklists.manufacturer.links %}"{{link.handle}}",{% endfor %}];
     var arr, current_field, dropdown_val1, dropdown_val2, dropdown_val3, dropdown_val4,search_tag,tagstr,newtext;
     
-    console.log("menuArr ::"+JSON.stringify(menuArr));  
+    console.log("menuArr :: "+JSON.stringify(menuArr));  
     console.log("mfgArr :: "+mfgArr);     
     disableSearch();
 
@@ -240,8 +240,8 @@
      // console.log("mfgstr :: "+mfgstr);
       var flag = 0;
       $.each(mfgArr,function(key,val){
-        //console.log("val :: "+val);
-       // console.log("mfgstr :: "+mfgstr);
+        console.log("val :: "+val);
+        console.log("mfgstr :: "+mfgstr);
         if(val.indexOf(mfgstr) > -1)  
         {   
           flag = 1;

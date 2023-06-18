@@ -100,16 +100,18 @@
     // dropdown1 build
     window.onload = function() {
       var dropdownContent = document.getElementById('brand-list');
-      menuArr.forEach(function(item) {
-          var brand = Object.keys(item)[0];
+      console.log(dropdownContent);  // should not be null
+      console.log(menuArr);  // should not be null or undefined
+      Object.keys(menuArr).forEach(function(brand) {
+          console.log(brand);  // should print each brand
           var aElement = document.createElement('a');
-          console.log(brand);
           aElement.href = '#';
           aElement.setAttribute('data-value', brand);
-          aElement.textContent = brand.charAt(0).toUpperCase() + brand.slice(1);  // Capitalizes the first letter
+          aElement.textContent = brand.charAt(0).toUpperCase() + brand.slice(1);
           dropdownContent.appendChild(aElement);
-        });
-    };
+      });
+  };
+  
   
 
     //Out side click

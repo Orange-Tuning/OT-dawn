@@ -321,7 +321,6 @@
     },
     "5fe36290-5009-4b13-8ae1-8f1e7082d905": {
       "type": "multi-featured-coll",
-      "disabled": true,
       "settings": {
         "view_all_style": "solid",
         "heading1": "BODY PARTS",
@@ -347,6 +346,34 @@
         "content_layout": "no-overlap",
         "mobile_content_alignment": "left"
       }
+    },
+    "be22375c-ba1d-457f-ad41-2ce3a6df7a27": {
+      "type": "multi-featured-coll",
+      "disabled": true,
+      "settings": {
+        "view_all_style": "solid",
+        "heading1": "Body Parts",
+        "text1": "",
+        "button1": "Shop Now",
+        "color_pick": "#ffffff",
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left"
+      }
     }
   },
   "order": [
@@ -358,6 +385,7 @@
     "collage",
     "video",
     "multicolumn",
-    "5fe36290-5009-4b13-8ae1-8f1e7082d905"
+    "5fe36290-5009-4b13-8ae1-8f1e7082d905",
+    "be22375c-ba1d-457f-ad41-2ce3a6df7a27"
   ]
 }

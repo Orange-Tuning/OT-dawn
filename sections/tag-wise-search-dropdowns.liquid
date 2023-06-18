@@ -100,14 +100,16 @@
     // dropdown1 build
     window.onload = function() {
       var dropdownContent = document.getElementById('brand-list');
-      Object.keys(menuArr).forEach(function(brand) {
+      menuArr.forEach(function(item) {
+          var brand = Object.keys(item)[0];
           var aElement = document.createElement('a');
           aElement.href = '#';
           aElement.setAttribute('data-value', brand);
           aElement.textContent = brand.charAt(0).toUpperCase() + brand.slice(1);  // Capitalizes the first letter
           dropdownContent.appendChild(aElement);
-      });
-  };
+        });
+    };
+  
 
     //Out side click
     $(document).on("click", function(event){

@@ -242,7 +242,7 @@
       $.each(mfgArr,function(key,val){
         console.log("val :: "+val);
         console.log("mfgstr :: "+mfgstr);
-        if(val.indexOf(mfgstr) > -1)  
+        if(val.indexOf(mfgstr) >= 0)  
         {   
           flag = 1;
           var mfgnewval = val.substring(val.lastIndexOf('_')).replace("_",'').replace("-"," ");

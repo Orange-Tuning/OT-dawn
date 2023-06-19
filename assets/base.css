@@ -3113,3 +3113,12 @@ details-disclosure > details {
 .collection-hero__image-container.media {
   background: none;
 }
+
+.
+.product__description table {
+  box-shadow: none;
+}
+
+.product__description table:not([class]) td, table:not([class]) th {
+  border: none;
+}
